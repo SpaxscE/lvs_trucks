@@ -18,6 +18,7 @@ ENT.MDL = "models/hunter/plates/plate2x7.mdl"
 ENT.AITEAM = 0
 
 ENT.MaxVelocity = 1200
+ENT.MaxVelocityReverse = 200
 
 ENT.SteerSpeed = 1
 ENT.SteerReturnSpeed = 2
@@ -26,9 +27,9 @@ ENT.PhysicsWeightScale = 2
 
 ENT.ThrottleRate = 0.3
 
-ENT.EngineTorque = 200
-ENT.EngineCurve = 0
-ENT.EngineCurveBoostLow = 4
+ENT.EngineTorque = 60
+ENT.EngineCurve = 0.5
+ENT.EngineCurveBoostLow = 10
 
 ENT.EngineIdleRPM = 1000
 ENT.EngineMaxRPM = 6000
