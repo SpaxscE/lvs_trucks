@@ -25,4 +25,15 @@ function ENT:UpdatePoseParameters( steer, speed_kmh, engine_rpm, throttle, brake
 		[5] = 12,
 	}
 	self:SetPoseParameter( "stick_gear", self:QuickLerp( "stick_gear", ( GearIDtoPose[ gear ] or 1 ), 2 ) )
+    
+    -- this is shite
+    if ( IsValid( self._drivingWheel ) ) then
+        local rotation = self._drivingWheel:GetLocalAngles().r
+
+        self:SetPoseParameter( "shaft", rotation )
+    else
+        for _, ent in ipairs( self:GetWheels() ) do
+            self._drivingWheel = ent
+        end
+    end
 end
