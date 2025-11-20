@@ -26,6 +26,7 @@ ENT.SteerReturnSpeed = 2
 ENT.PhysicsWeightScale = 2
 
 ENT.ThrottleRate = 0.3
+ENT.BrakeRate = 1
 
 ENT.EngineTorque = 60
 ENT.EngineCurve = 0.5
