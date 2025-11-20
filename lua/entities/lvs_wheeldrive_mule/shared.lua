@@ -50,7 +50,7 @@ ENT.WheelDownForce = 2000
 
 ENT.TransGears = 8
 ENT.TransGearsReverse = 1
-ENT.TransShiftSpeed = 0.1
+ENT.TransShiftSpeed = 0.75
 ENT.TransMinGearHoldTime = 0.5
 
 ENT.EngineSounds = {
