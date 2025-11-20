@@ -36,6 +36,8 @@ function ENT:OnSpawn( pObj )
 	self:AddTurboCharger() -- turbodiesel but idk how you want it
 
     self:SpawnWheels()
+
+	self:AddTrailerHitch( Vector(-0.951, 0.000, 1.421) * 40, LVS.HITCHTYPE_MALE )
 end
 
 function ENT:SpawnWheels()
@@ -50,7 +52,7 @@ function ENT:SpawnWheels()
     local Wheel1R = self:AddWheel( {
 		pos = Vector( 3.820,-0.997, 0.636) * 40,
 		mdl = WheelModel,
-		mdl_ang = Angle(0, 90),
+		mdl_ang = Angle(0,-90),
         radius = 0.542 * 40,
 	} )
 	local Axle1 = self:DefineAxle( {
@@ -66,9 +68,9 @@ function ENT:SpawnWheels()
 		Suspension = {
 			Height = 5,
 			MaxTravel = 7,
-			SpringConstant = 18000,
-			SpringDamping = 1500,
-			SpringRelativeDamping = 1000,
+			SpringConstant = 25000,
+			SpringDamping = 2000,
+			SpringRelativeDamping = 2000,
 		},
 	} )
 
@@ -102,9 +104,9 @@ function ENT:SpawnWheels()
 		Suspension = {
 			Height = 6,
 			MaxTravel = 7,
-			SpringConstant = 20000,
-			SpringDamping = 1500,
-			SpringRelativeDamping = 1000,
+			SpringConstant = 30000,
+			SpringDamping = 2000,
+			SpringRelativeDamping = 2000,
 		},
 	} )
 
@@ -136,9 +138,9 @@ function ENT:SpawnWheels()
 		Suspension = {
 			Height = 6,
 			MaxTravel = 7,
-			SpringConstant = 20000,
-			SpringDamping = 1500,
-			SpringRelativeDamping = 1000,
+			SpringConstant = 30000,
+			SpringDamping = 2000,
+			SpringRelativeDamping = 2000,
 		},
 	} )
 

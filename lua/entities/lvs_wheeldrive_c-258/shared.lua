@@ -16,13 +16,14 @@ ENT.MDL = "models/thegordonbeeman/vehicles/c-258.mdl"
 ENT.MaxVelocity = 780
 ENT.MaxVelocityReverse = 150
 
-ENT.PhysicsWeightScale = 1.0
+ENT.PhysicsWeightScale = 2.0
 
-ENT.EngineCurve = 0.1
-ENT.EngineCurveBoostLow = 2.0
-ENT.EngineTorque = 70
+ENT.EngineCurve = 0.5
+ENT.EngineCurveBoostLow = 3.0
+ENT.EngineTorque = 40
 
-ENT.ThrottleRate = 0.5
+ENT.ThrottleRate = 0.3
+ENT.BrakeRate = 0.3
 
 -- ENT.EngineIgnitionTime = 0.8
 -- ENT.EngineStartStopVolume = 0.5
@@ -32,20 +33,28 @@ ENT.ThrottleRate = 0.5
 ENT.TransGears = 5
 ENT.TransGearsReverse = 1
 ENT.TransShiftSpeed = 1.0
+ENT.TransMinGearHoldTime = 0.5
 
--- ENT.SteerSpeed = 2.0
--- ENT.SteerReturnSpeed = 2.0
+ENT.SteerSpeed = 1.5
+ENT.SteerReturnSpeed = 1.3
 
 ENT.WheelBrakeLockupRPM = 0
 
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true -- supposed to be turbodiesel already so
 
--- ENT.WheelBrakeForce = 200
+ENT.PhysicsInertia = Vector( 8000, 2000, 8000)
 
--- ENT.WheelSideForce = 800
--- ENT.WheelDownForce = 500
+ENT.WheelPhysicsMass = 100
+ENT.WheelPhysicsInertia = Vector( 25, 10, 25)
+ENT.WheelPhysicsTireHeight = 35.53
 
+ENT.WheelBrakeForce = 400
+
+ENT.WheelSideForce = 800
+ENT.WheelDownForce = 2000
+
+ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/generic/truck_turbo.wav"
 ENT.TurboVolume = 1.0
 
