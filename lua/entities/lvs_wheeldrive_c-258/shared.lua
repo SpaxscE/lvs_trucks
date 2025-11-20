@@ -3,7 +3,7 @@ ENT.Base = "lvs_base_wheeldrive"
 ENT.PrintName = "C-258"
 ENT.Author = ""
 ENT.Information = "Luna's Vehicle Script"
-ENT.Category = "[LVS] - Cars"
+ENT.Category = "[LVS] - Trucks"
 
 ENT.VehicleCategory = "Cars" -- LVS Trucks?
 ENT.VehicleSubCategory = "Trucks"
