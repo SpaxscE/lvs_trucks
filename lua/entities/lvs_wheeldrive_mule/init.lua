@@ -13,7 +13,7 @@ function ENT:OnSpawn( PObj )
 	local FrontAxle = self:DefineAxle( {
 		Axle = {
 			ForwardAngle = Angle(0,90,0),
-			SteerType = LVS.WHEEL_STEER_FRONT,
+			SteerType = LVS.WHEEL_STEER_ACKERMANN,
 			SteerAngle = 30,
 			TorqueFactor = 0.5,
 			BrakeFactor = 1,
@@ -75,7 +75,7 @@ function ENT:OnSpawn( PObj )
 	local RearAxle2 = self:DefineAxle( {
 		Axle = {
 			ForwardAngle = Angle(0,90,0),
-			SteerType = LVS.WHEEL_STEER_REAR,
+			SteerType = LVS.WHEEL_STEER_ACKERMANN,
 			SteerAngle = 20,
 			TorqueFactor = 0.5,
 			BrakeFactor = 1,
