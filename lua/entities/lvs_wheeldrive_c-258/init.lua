@@ -4,6 +4,15 @@ AddCSLuaFile( "cl_init.lua" )
 include( "shared.lua" )
 
 function ENT:OnSpawn( pObj )
+	local Bonnet_Handler = self:AddDoorHandler( "!bonnet",
+	Vector( 3.790, 0.000, 1.975) * 40, Angle(),
+	Vector(-30,-28,-5), Vector( 30, 28, 5),
+	Vector(-30,-28,-5), Vector( 0, 28, 60) )
+	Bonnet_Handler:SetRate( 3.5 )
+    Bonnet_Handler:SetRateExponent( 1.1 )
+	Bonnet_Handler:SetSoundOpen( "lvs/vehicles/generic/truck_open_01.wav" )
+	Bonnet_Handler:SetSoundClose( "lvs/vehicles/generic/truck_close_01-short.wav" )
+
 	local Door1L_Handler = self:AddDoorHandler( "door1_l",
 	Vector( 2.312, 0.890, 1.900) * 40, Angle(),
 	Vector(-15,-6,-24), Vector( 15, 6, 24),

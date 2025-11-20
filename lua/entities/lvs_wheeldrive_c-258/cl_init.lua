@@ -1,6 +1,8 @@
 include( "shared.lua" )
 
 function ENT:OnSpawn()
+	self:CreateBonePoseParameter( "bonnet", self:LookupBone( "bonnet" ), nil, Angle( 70), nil, nil )
+
 	self:CreateBonePoseParameter( "pedal_clutch", self:LookupBone( "pedal_clutch" ), nil, nil, nil, Vector( 0, 0, 1.0) )
 	self:CreateBonePoseParameter( "pedal_brake", self:LookupBone( "pedal_brake" ), nil, nil, nil, Vector( 0, 0, 1.0) )
 	self:CreateBonePoseParameter( "pedal_throttle", self:LookupBone( "pedal_throttle" ), nil, nil, nil, Vector( 0, 0, 1.0) )
