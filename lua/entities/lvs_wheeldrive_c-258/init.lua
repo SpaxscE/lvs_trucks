@@ -3,8 +3,6 @@ AddCSLuaFile( "cl_init.lua" )
 
 include( "shared.lua" )
 
--- You modify whatever you want, I made this to try seat and wheel poses as well as rigcontrollers
-
 function ENT:OnSpawn( pObj )
 	local Door1L_Handler = self:AddDoorHandler( "door1_l",
 	Vector( 2.312, 0.890, 1.900) * 40, Angle(),
@@ -88,7 +86,7 @@ function ENT:SpawnWheels()
     local Wheel2R = self:AddWheel( {
 		pos = Vector(-0.255,-0.997, 0.624) * 40,
 		mdl = WheelModel,
-		mdl_ang = Angle(0, 90),
+		mdl_ang = Angle(0,-90),
         radius = 0.542 * 40,
 	} )
 	local Axle2 = self:DefineAxle( {
@@ -122,7 +120,7 @@ function ENT:SpawnWheels()
     local Wheel3R = self:AddWheel( {
 		pos = Vector(-1.718,-0.997, 0.624) * 40,
 		mdl = WheelModel,
-		mdl_ang = Angle(0, 90),
+		mdl_ang = Angle(0,-90),
         radius = 0.542 * 40,
 	} )
 	local Axle3 = self:DefineAxle( {
