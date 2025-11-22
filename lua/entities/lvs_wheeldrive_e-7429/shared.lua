@@ -1,31 +1,31 @@
 ENT.Base = "lvs_base_wheeldrive"
 
-ENT.PrintName = "C-258"
+ENT.PrintName = "E-7429"
 ENT.Author = ""
 ENT.Information = "Luna's Vehicle Script"
 ENT.Category = "[LVS] - Trucks"
 
-ENT.VehicleCategory = "Cars" -- LVS Trucks?
+ENT.VehicleCategory = "Cars"
 ENT.VehicleSubCategory = "Trucks"
 
 ENT.Spawnable			= true
 ENT.AdminSpawnable		= false
 
-ENT.MDL = "models/thegordonbeeman/vehicles/c-258.mdl"
+ENT.MDL = "models/thegordonbeeman/vehicles/e-7429.mdl"
 
-ENT.MaxVelocity = 780
-ENT.MaxVelocityReverse = 150
+ENT.MaxVelocity = 500
+ENT.MaxVelocityReverse = 100
 
 ENT.PhysicsWeightScale = 2.0
 
 ENT.EngineCurve = 1
-ENT.EngineCurveBoostLow = 3.0
-ENT.EngineTorque = 40
+ENT.EngineCurveBoostLow = 5.0
+ENT.EngineTorque = 50
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
 
-ENT.ThrottleRate = 0.3
+ENT.ThrottleRate = 0.2
 ENT.BrakeRate = 0.3
 
 -- ENT.EngineIgnitionTime = 0.8
@@ -33,54 +33,54 @@ ENT.BrakeRate = 0.3
 -- ENT.EngineStartSound = "lmx/vehicles/m2_halftrack/start.wav"
 -- ENT.EngineStopSound = "lmx/vehicles/m2_halftrack/stop.wav"
 
-ENT.TransGears = 5
+ENT.TransGears = 4
 ENT.TransGearsReverse = 1
-ENT.TransShiftSpeed = 1.0
+ENT.TransShiftSpeed = 0.5
 ENT.TransShiftTorqueFactor = 0.6
-ENT.TransMinGearHoldTime = 1.5
+ENT.TransMinGearHoldTime = 0.5
 
-ENT.SteerSpeed = 1.5
-ENT.SteerReturnSpeed = 1.3
+ENT.SteerSpeed = 1.2
+ENT.SteerReturnSpeed = 1.1
 
 ENT.WheelBrakeLockupRPM = 1
 
 ENT.AllowSuperCharger = false
-ENT.AllowTurbo = true -- supposed to be turbodiesel already so
+ENT.AllowTurbo = true
 
-ENT.PhysicsInertia = Vector( 8000, 2000, 8000)
+ENT.PhysicsInertia = Vector( 12000, 2000, 12000)
 
-ENT.WheelPhysicsMass = 100
-ENT.WheelPhysicsInertia = Vector( 25, 10, 25)
-ENT.WheelPhysicsTireHeight = 8.77
+ENT.WheelPhysicsMass = 120
+ENT.WheelPhysicsInertia = Vector( 30, 10, 30)
+ENT.WheelPhysicsTireHeight = 16
 
 ENT.WheelBrakeForce = 400
 
 ENT.WheelSideForce = 800
-ENT.WheelDownForce = 2000
+ENT.WheelDownForce = 2500
 
 ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/generic/truck_turbo.wav"
-ENT.TurboVolume = 1.0
+ENT.TurboVolume = 0.5
 
 ENT.EngineSounds = {
-	{ sound = "lvs/vehicles/kraz/kraz_idle.wav",
+	{ sound = "lvs/vehicles/kirovets/kirovets_idle.wav",
 		Volume = 1.0,
 		Pitch = 90,
 		PitchMul = 30,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_IDLE_ONLY,
 	},
-	{ sound = "lvs/vehicles/kraz/kraz_high_off.wav",
+	{ sound = "lvs/vehicles/kirovets/kirovets_high.wav",
 		Volume = 1.0,
-		Pitch = 60,
-		PitchMul = 50,
+		Pitch = 80,
+		PitchMul = 40,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_REV_UP,
 	},
-	{ sound = "lvs/vehicles/kraz/kraz_high.wav",
+	{ sound = "lvs/vehicles/kirovets/kirovets_low.wav",
 		Volume = 1.0,
-		Pitch = 60,
-		PitchMul = 50,
+		Pitch = 80,
+		PitchMul = 40,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_REV_DOWN,
 	},
@@ -88,7 +88,7 @@ ENT.EngineSounds = {
 
 ENT.ExhaustPositions = {
 	{
-		pos = Vector( 1.061, 0.668, 0.563) * 40,
-		ang = Angle( 22, 100),
+		pos = Vector( 2.379, 0.715, 3.637) * 40,
+		ang = Angle(-90),
 	},
 }
