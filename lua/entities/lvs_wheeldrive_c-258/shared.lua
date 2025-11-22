@@ -1,11 +1,11 @@
-ENT.Base = "lvs_base_wheeldrive"
+ENT.Base = "lvs_wheeldrive_truckbase"
 
 ENT.PrintName = "C-258"
 ENT.Author = ""
 ENT.Information = "Luna's Vehicle Script"
-ENT.Category = "[LVS] - Trucks"
+ENT.Category = "[LVS] - Trucks - Pack"
 
-ENT.VehicleCategory = "Cars" -- LVS Trucks?
+ENT.VehicleCategory = "Rig"
 ENT.VehicleSubCategory = "Trucks"
 
 ENT.Spawnable			= true

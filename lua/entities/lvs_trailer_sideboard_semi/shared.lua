@@ -3,9 +3,9 @@ ENT.Base = "lvs_base_wheeldrive_trailer"
 ENT.PrintName = "Sideboard semi-trailer"
 ENT.Author = ""
 ENT.Information = "Luna's Vehicle Script"
-ENT.Category = "[LVS] - Trailers"
+ENT.Category = "[LVS] - Trucks - Pack"
 
-ENT.VehicleCategory = "Cars"
+ENT.VehicleCategory = "Rig"
 ENT.VehicleSubCategory = "Trailers"
 
 ENT.Spawnable			= true

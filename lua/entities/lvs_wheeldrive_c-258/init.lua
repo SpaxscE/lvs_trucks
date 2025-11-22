@@ -153,10 +153,4 @@ function ENT:SpawnWheels()
 
 	self:CreateRigControler( "3l", Wheel3L, 40 * 0.835, 40 * 0.480 )
 	self:CreateRigControler( "3r", Wheel3R, 40 * 0.835, 40 * 0.480 )
-
-	self:OnCoupleChanged( nil, nil, false )
-end
-
-function ENT:OnCoupleChanged( targetVehicle, targetHitch, active )
-	self:SetMaxThrottle( active and 1 or 0.5 )
 end
