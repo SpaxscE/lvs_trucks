@@ -4,8 +4,6 @@ AddCSLuaFile( "cl_init.lua" )
 include( "shared.lua" )
 
 function ENT:OnSpawn( pObj )
-	self:SetRacingHud( true )
-
 	-- local Bonnet_Handler = self:AddDoorHandler( "!bonnet",
 	-- Vector( 3.790, 0.000, 1.975) * 40, Angle(),
 	-- Vector(-30,-28,-5), Vector( 30, 28, 5),
@@ -187,4 +185,10 @@ function ENT:SpawnWheels()
 
 	-- self:CreateRigControler( "4l", Wheel4L, 40 * 0.835, 40 * 0.480 )
 	-- self:CreateRigControler( "4r", Wheel4R, 40 * 0.835, 40 * 0.480 )
+
+	self:OnCoupleChanged( nil, nil, false )
+end
+
+function ENT:OnCoupleChanged( targetVehicle, targetHitch, active )
+	self:SetMaxThrottle( active and 1 or 0.5 )
 end

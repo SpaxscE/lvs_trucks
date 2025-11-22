@@ -20,7 +20,7 @@ ENT.PhysicsWeightScale = 2.0
 
 ENT.EngineCurve = 1
 ENT.EngineCurveBoostLow = 3.0
-ENT.EngineTorque = 40
+ENT.EngineTorque = 60
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
@@ -42,7 +42,7 @@ ENT.TransMinGearHoldTime = 1.5
 ENT.SteerSpeed = 1.5
 ENT.SteerReturnSpeed = 1.3
 
-ENT.WheelBrakeLockupRPM = 1
+ENT.WheelBrakeLockupRPM = 10
 
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true -- supposed to be turbodiesel already so
