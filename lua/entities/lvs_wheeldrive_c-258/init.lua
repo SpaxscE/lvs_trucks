@@ -4,6 +4,9 @@ AddCSLuaFile( "cl_init.lua" )
 include( "shared.lua" )
 
 function ENT:OnSpawn( pObj )
+	self:SetRacingHud( true )
+	self:EnableManualTransmission()
+
 	local Bonnet_Handler = self:AddDoorHandler( "!bonnet",
 	Vector( 3.790, 0.000, 1.975) * 40, Angle(),
 	Vector(-30,-28,-5), Vector( 30, 28, 5),
