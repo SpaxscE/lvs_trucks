@@ -22,6 +22,9 @@ ENT.EngineCurve = 1
 ENT.EngineCurveBoostLow = 3.0
 ENT.EngineTorque = 40
 
+ENT.EngineIdleRPM = 500
+ENT.EngineMaxRPM = 3250
+
 ENT.ThrottleRate = 0.3
 ENT.BrakeRate = 0.3
 
