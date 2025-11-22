@@ -15,24 +15,27 @@ ENT.AdminSpawnable		= false
 ENT.WheelBrakeApplySound = "LVS.Brake.Apply"
 ENT.WheelBrakeReleaseSound = "LVS.Brake.Release"
 
+ENT.TransShiftSound = "common/null.wav"
+
 sound.Add( {
 	name = "LVS.Brake.Release",
 	channel = CHAN_STATIC,
 	level = 75,
-	volume = 0.25,
-	sound = "lvs/vehicles/generic/truck_brake_release.ogg",
+	volume = 1,
+	sound = {
+		"lvs/vehicles/generic/pneumatic_brake_release_01.wav",
+		"lvs/vehicles/generic/pneumatic_brake_release_02.wav",
+		"lvs/vehicles/generic/pneumatic_brake_release_03.wav",
+		"lvs/vehicles/generic/pneumatic_brake_release_04.wav",
+	}
 } )
 
 sound.Add( {
 	name = "LVS.Brake.Apply",
 	channel = CHAN_STATIC,
 	level = 75,
-	volume = 0.25,
-	sound = {
-		"lvs/vehicles/generic/truck_brake1.ogg",
-		"lvs/vehicles/generic/truck_brake2.ogg",
-		"lvs/vehicles/generic/truck_brake3.ogg",
-	}
+	volume = 1,
+	sound = "lvs/vehicles/generic/pneumatic_brake_pull.wav",
 } )
 
 if CLIENT then return end
@@ -50,15 +53,21 @@ end
 function ENT:OnBrakeChanged( Old, New )
 	if Old == New then return end
 
-	local BrakeActive = New ~= 0 and self:GetVelocity():Length() < 100
+	local BrakeActive = New ~= 0
 
 	if BrakeActive == self._OldBrakeActive then return end
 
 	self._OldBrakeActive = BrakeActive
 
-	if BrakeActive then return end
+	if BrakeActive then
+		if self:GetVelocity():Length() > 100 then
+			self:EmitSound( self.WheelBrakeApplySound, 75, 100, 1 )
+		end
 
-	self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 0.25 )
+		return
+	end
+
+	self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 1 )
 end
 
 function ENT:PostInitialize( PObj )
@@ -85,18 +94,16 @@ function ENT:GetEngineTorque()
 	return BaseClass.GetEngineTorque( self )
 end
 
---ENT.TransShiftSound = "lvs/vehicles/generic/gear_shift.wav"
-
 function ENT:OnHandbrakeActiveChanged( Active )
 	if Active then
 		if self:GetVelocity():Length() > 100 then
-			self:EmitSound( self.WheelBrakeApplySound, 75, 100, 0.25 )
+			self:EmitSound( self.WheelBrakeApplySound, 75, 100, 1 )
 			self._AllowReleaseSound = true
 		end
 	else
 		if self._AllowReleaseSound then
 			self._AllowReleaseSound = nil
-			self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 0.25 )
+			self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 1 )
 		end
 	end
 end
