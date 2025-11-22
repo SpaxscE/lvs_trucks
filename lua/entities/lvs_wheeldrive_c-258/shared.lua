@@ -38,7 +38,7 @@ ENT.TransMinGearHoldTime = 0.5
 ENT.SteerSpeed = 1.5
 ENT.SteerReturnSpeed = 1.3
 
-ENT.WheelBrakeLockupRPM = 0
+ENT.WheelBrakeLockupRPM = 1
 
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true -- supposed to be turbodiesel already so
