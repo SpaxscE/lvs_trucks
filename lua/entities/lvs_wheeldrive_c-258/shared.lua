@@ -25,8 +25,8 @@ ENT.EngineTorque = 50
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
 
-ENT.ThrottleRate = 0.3
-ENT.BrakeRate = 0.3
+ENT.ThrottleRate = 0.5
+ENT.BrakeRate = 1
 
 -- ENT.EngineIgnitionTime = 0.8
 -- ENT.EngineStartStopVolume = 0.5
