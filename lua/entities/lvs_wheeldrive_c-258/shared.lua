@@ -20,13 +20,13 @@ ENT.PhysicsWeightScale = 2.0
 
 ENT.EngineCurve = 1
 ENT.EngineCurveBoostLow = 3.0
-ENT.EngineTorque = 50
+ENT.EngineTorque = 40
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
 
-ENT.ThrottleRate = 0.5
-ENT.BrakeRate = 1
+ENT.ThrottleRate = 0.3
+ENT.BrakeRate = 0.5
 
 -- ENT.EngineIgnitionTime = 0.8
 -- ENT.EngineStartStopVolume = 0.5
@@ -36,7 +36,7 @@ ENT.BrakeRate = 1
 ENT.TransGears = 5
 ENT.TransGearsReverse = 1
 ENT.TransShiftSpeed = 1.0
-ENT.TransShiftTorqueFactor = 0.6
+ENT.TransShiftTorqueFactor = 0.5
 ENT.TransMinGearHoldTime = 1.5
 
 ENT.SteerSpeed = 1.5
