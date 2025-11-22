@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+	$basetexture 				"models/thegordonbeeman/_mudrunner/trucks_maz_big_wheel_bt"
+	$bumpmap 					"models/thegordonbeeman/_mudrunner/trucks_maz_big_wheel_bm"
+
+	$phong 						"1"
+	$phongboost 				"3.0"
+	$phongexponent				"15.0"
+	$phongfresnelranges			"[0.2 0.25 1.0]"
+	$phongalbedotint			"1"
+}
