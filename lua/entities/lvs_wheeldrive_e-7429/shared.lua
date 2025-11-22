@@ -43,7 +43,8 @@ ENT.SteerSpeed = 1.0
 ENT.SteerReturnSpeed = 1.0
 
 ENT.WheelBrakeLockupRPM = 3
-ENT.WheelBrakeReleaseSound = "lvs/vehicles/generic/truck_brake_release.ogg"
+ENT.WheelBrakeApplySound = "LVS.Brake.Apply"
+ENT.WheelBrakeReleaseSound = "LVS.Brake.Release"
 
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true
