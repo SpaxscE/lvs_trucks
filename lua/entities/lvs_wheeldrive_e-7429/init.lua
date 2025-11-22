@@ -173,7 +173,7 @@ function ENT:SpawnWheels()
 			SteerAngle = 0,
 			TorqueFactor = 0.25,
 			BrakeFactor = 1,
-			UseHandbrake = false,
+			UseHandbrake = true,
 		},
 		Wheels = { Wheel4L, Wheel4R },
 		Suspension = {
