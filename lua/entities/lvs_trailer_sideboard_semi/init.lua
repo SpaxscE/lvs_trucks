@@ -49,8 +49,8 @@ function ENT:SpawnWheels()
 			Height = 5,
 			MaxTravel = 1,
 			SpringConstant = 20000,
-			SpringDamping = 3000,
-			SpringRelativeDamping = 3000,
+			SpringDamping = 2000,
+			SpringRelativeDamping = 2000,
 		},
 	} )
 
@@ -82,8 +82,8 @@ function ENT:SpawnWheels()
 			Height = 5,
 			MaxTravel = 1,
 			SpringConstant = 20000,
-			SpringDamping = 3000,
-			SpringRelativeDamping = 3000,
+			SpringDamping = 2000,
+			SpringRelativeDamping = 2000,
 		},
 	} )
 
