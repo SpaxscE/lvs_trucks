@@ -51,7 +51,7 @@ ENT.PhysicsInertia = Vector( 8000, 2000, 8000)
 
 ENT.WheelPhysicsMass = 100
 ENT.WheelPhysicsInertia = Vector( 25, 10, 25)
-ENT.WheelPhysicsTireHeight = 35.53
+ENT.WheelPhysicsTireHeight = 8.77
 
 ENT.WheelBrakeForce = 400
 

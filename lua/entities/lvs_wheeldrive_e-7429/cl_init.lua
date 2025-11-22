@@ -1,0 +1,55 @@
+include( "shared.lua" )
+
+function ENT:OnSpawn()
+	-- self:CreateBonePoseParameter( "bonnet", self:LookupBone( "bonnet" ), nil, Angle( 70), nil, nil )
+
+	self:CreateBonePoseParameter( "pedal_clutch", self:LookupBone( "pedal_clutch" ), nil, Angle( 20), nil, nil )
+	self:CreateBonePoseParameter( "pedal_brake", self:LookupBone( "pedal_brake" ), nil, Angle( 20), nil, nil )
+	self:CreateBonePoseParameter( "pedal_throttle", self:LookupBone( "pedal_throttle" ), nil, Angle( 20), nil, nil )
+    
+	self:CreateBonePoseParameter( "stick_handbrake", self:LookupBone( "stick_handbrake" ), nil, Angle( 30), nil, nil )
+    
+	self:CreateBonePoseParameter( "stick_gear", self:LookupBone( "stick_gear" ), nil, Angle(-30), nil, nil )
+end
+
+function ENT:DoExhaustFX( Magnitude )
+	for _, data in ipairs( self.ExhaustPositions ) do
+		if data.bodygroup then
+			if not self:BodygroupIsValid( data.bodygroup.name, data.bodygroup.active ) then continue end
+		end
+
+		local effectdata = EffectData()
+			effectdata:SetOrigin( self:LocalToWorld( data.pos ) )
+			effectdata:SetNormal( self:LocalToWorldAngles( data.ang ):Forward() )
+			effectdata:SetMagnitude( Magnitude )
+			effectdata:SetEntity( self )
+		util.Effect( "lvs_exhaust_tractor", effectdata )
+	end
+end
+
+function ENT:UpdatePoseParameters( steer, speed_kmh, engine_rpm, throttle, brake, handbrake, clutch, gear, temperature, fuel, oil, ammeter )
+    self:SetPoseParameter( "vehicle_steer", steer )
+
+	self:SetBonePoseParameter( "pedal_throttle", throttle )
+	self:SetBonePoseParameter( "pedal_clutch", clutch )
+	self:SetBonePoseParameter( "pedal_brake", brake )
+    
+	self:SetBonePoseParameter( "stick_handbrake", handbrake )
+    
+    local GearIDtoPose = {
+		[-1] = 0,
+		[0] = 0.5,
+		[1] = 1,
+	}
+	self:SetBonePoseParameter( "stick_gear", self:QuickLerp( "stick_gear", ( GearIDtoPose[ gear ] or 1 ), 2 ) )
+    
+    if ( IsValid( self._drivingWheel ) ) then
+        local rotation = self._drivingWheel:GetLocalAngles().r
+
+        self:SetPoseParameter( "shaft", rotation )
+    else
+        for _, ent in ipairs( self:GetWheels() ) do
+            self._drivingWheel = ent
+        end
+    end
+end
