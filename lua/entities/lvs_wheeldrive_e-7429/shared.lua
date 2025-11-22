@@ -42,7 +42,7 @@ ENT.TransMinGearHoldTime = 0.5
 ENT.SteerSpeed = 1.0
 ENT.SteerReturnSpeed = 1.0
 
-ENT.WheelBrakeLockupRPM = 1
+ENT.WheelBrakeLockupRPM = 3
 
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true
