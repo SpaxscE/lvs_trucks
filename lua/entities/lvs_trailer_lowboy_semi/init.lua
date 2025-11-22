@@ -148,7 +148,7 @@ function ENT:AddSupport( data )
     SupportEntity:Activate()
     SupportEntity:PhysicsInitSphere( 5, "default_silent" )
     SupportEntity:SetNoDraw( true ) 
-    SupportEntity:SetCollisionGroup( COLLISION_GROUP_PASSABLE_DOOR )
+    SupportEntity:SetCollisionGroup( COLLISION_GROUP_PLAYER )
     SupportEntity.DoNotDuplicate = true
     SupportEntity.BaseMass = data.mass
 
