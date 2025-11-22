@@ -50,16 +50,18 @@ function EFFECT:Init( data )
 
 	local Col = 100
 
-	Col = Col - (Scale * Col * 0.6)
+	Col = Col - (Scale * Col)
 
 	local particle = emitter:Add( Materials[ math.random(1, #Materials ) ], Pos )
 
 	if not particle then return end
 
-	particle:SetVelocity( Vel + Dir * (100 + math.min( 800 * Scale, 300)) + VectorRand() * 50 * Scale + Ent:GetVelocity() * 0.5 + Vector(0,0,Scale * 100) )
-	particle:SetDieTime( 0.4 + Scale * math.Rand(0.8,1.2) )
+	local invert = (1 - Dir.z) / 2
+
+	particle:SetVelocity( Vel + Dir * (100 + math.min( 800 * Scale, 300)) + VectorRand() * 50 * Scale + (Ent:GetVelocity() * 0.5 + Vector(0,0,Scale * 100)) * invert )
+	particle:SetDieTime( 0.4 + Scale * math.Rand(0.8,1.2) * invert )
 	particle:SetAirResistance( 400 ) 
-	particle:SetStartAlpha( 80 + Scale * 120 )
+	particle:SetStartAlpha( 100 - Scale * 40 )
 	particle:SetStartSize( 2 + (throttle + Scale) * 4 )
 	particle:SetEndSize( 10 + 35 * (throttle + Scale) )
 	particle:SetRoll( math.Rand( -1, 1 ) )
