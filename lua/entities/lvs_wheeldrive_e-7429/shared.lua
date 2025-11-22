@@ -88,6 +88,7 @@ ENT.EngineSounds = {
 
 ENT.ExhaustPositions = {
 	{
+		effect = "lvs_truck_exhaust",
 		pos = Vector( 2.379, 0.715, 3.637) * 40,
 		ang = Angle(-90),
 	},

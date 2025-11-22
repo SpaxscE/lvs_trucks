@@ -12,21 +12,6 @@ function ENT:OnSpawn()
 	self:CreateBonePoseParameter( "stick_gear", self:LookupBone( "stick_gear" ), nil, Angle(-30), nil, nil )
 end
 
-function ENT:DoExhaustFX( Magnitude )
-	for _, data in ipairs( self.ExhaustPositions ) do
-		if data.bodygroup then
-			if not self:BodygroupIsValid( data.bodygroup.name, data.bodygroup.active ) then continue end
-		end
-
-		local effectdata = EffectData()
-			effectdata:SetOrigin( self:LocalToWorld( data.pos ) )
-			effectdata:SetNormal( self:LocalToWorldAngles( data.ang ):Forward() )
-			effectdata:SetMagnitude( Magnitude )
-			effectdata:SetEntity( self )
-		util.Effect( "lvs_exhaust_tractor", effectdata )
-	end
-end
-
 function ENT:UpdatePoseParameters( steer, speed_kmh, engine_rpm, throttle, brake, handbrake, clutch, gear, temperature, fuel, oil, ammeter )
     self:SetPoseParameter( "vehicle_steer", steer )
 
