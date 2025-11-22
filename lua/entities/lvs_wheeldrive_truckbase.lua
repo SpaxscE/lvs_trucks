@@ -12,7 +12,28 @@ ENT.Category = "[LVS] - Trucks - Pack"
 ENT.Spawnable			= false
 ENT.AdminSpawnable		= false
 
-ENT.WheelBrakeReleaseSound = "lvs/vehicles/generic/truck_brake_release.ogg"
+ENT.WheelBrakeApplySound = "LVS.Brake.Apply"
+ENT.WheelBrakeReleaseSound = "LVS.Brake.Release"
+
+sound.Add( {
+	name = "LVS.Brake.Release",
+	channel = CHAN_STATIC,
+	level = 75,
+	volume = 0.25,
+	sound = "lvs/vehicles/generic/truck_brake_release.ogg",
+} )
+
+sound.Add( {
+	name = "LVS.Brake.Apply",
+	channel = CHAN_STATIC,
+	level = 75,
+	volume = 0.25,
+	sound = {
+		"lvs/vehicles/generic/truck_brake1.ogg",
+		"lvs/vehicles/generic/truck_brake2.ogg",
+		"lvs/vehicles/generic/truck_brake3.ogg",
+	}
+} )
 
 if CLIENT then return end
 
@@ -27,21 +48,17 @@ function ENT:LerpBrake( Brake )
 end
 
 function ENT:OnBrakeChanged( Old, New )
-	local BrakeActive = New ~= 0
+	if Old == New then return end
+
+	local BrakeActive = New ~= 0 and self:GetVelocity():Length() < 100
 
 	if BrakeActive == self._OldBrakeActive then return end
 
 	self._OldBrakeActive = BrakeActive
 
-	for _, wheel in pairs( self:GetWheels() ) do
-		if not IsValid( wheel ) then continue end
+	if BrakeActive then return end
 
-		if not BrakeActive and wheel:IsRotationLocked() then
-			self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 0.25 )
-
-			break
-		end
-	end
+	self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 0.25 )
 end
 
 function ENT:PostInitialize( PObj )
@@ -66,4 +83,20 @@ function ENT:GetEngineTorque()
 	end
 
 	return BaseClass.GetEngineTorque( self )
+end
+
+--ENT.TransShiftSound = "lvs/vehicles/generic/gear_shift.wav"
+
+function ENT:OnHandbrakeActiveChanged( Active )
+	if Active then
+		if self:GetVelocity():Length() > 100 then
+			self:EmitSound( self.WheelBrakeApplySound, 75, 100, 0.25 )
+			self._AllowReleaseSound = true
+		end
+	else
+		if self._AllowReleaseSound then
+			self._AllowReleaseSound = nil
+			self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 0.25 )
+		end
+	end
 end
