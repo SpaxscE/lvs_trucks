@@ -20,7 +20,7 @@ ENT.PhysicsWeightScale = 2.0
 
 ENT.EngineCurve = 1
 ENT.EngineCurveBoostLow = 3.0
-ENT.EngineTorque = 60
+ENT.EngineTorque = 50
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
