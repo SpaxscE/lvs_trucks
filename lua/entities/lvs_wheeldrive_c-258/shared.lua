@@ -18,7 +18,7 @@ ENT.MaxVelocityReverse = 150
 
 ENT.PhysicsWeightScale = 2.0
 
-ENT.EngineCurve = 0.5
+ENT.EngineCurve = 1
 ENT.EngineCurveBoostLow = 3.0
 ENT.EngineTorque = 40
 
@@ -33,7 +33,8 @@ ENT.BrakeRate = 0.3
 ENT.TransGears = 5
 ENT.TransGearsReverse = 1
 ENT.TransShiftSpeed = 1.0
-ENT.TransMinGearHoldTime = 0.5
+ENT.TransShiftTorqueFactor = 0.6
+ENT.TransMinGearHoldTime = 1.5
 
 ENT.SteerSpeed = 1.5
 ENT.SteerReturnSpeed = 1.3
