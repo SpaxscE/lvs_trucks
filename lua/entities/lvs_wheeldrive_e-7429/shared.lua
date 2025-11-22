@@ -39,8 +39,8 @@ ENT.TransShiftSpeed = 1.0
 ENT.TransShiftTorqueFactor = 0.4
 ENT.TransMinGearHoldTime = 0.5
 
-ENT.SteerSpeed = 1.2
-ENT.SteerReturnSpeed = 1.1
+ENT.SteerSpeed = 1.0
+ENT.SteerReturnSpeed = 1.0
 
 ENT.WheelBrakeLockupRPM = 1
 
@@ -59,28 +59,28 @@ ENT.WheelSideForce = 800
 ENT.WheelDownForce = 2500
 
 ENT.TurboBlowOff = "common/null.wav"
-ENT.TurboSound = "lvs/vehicles/generic/truck_turbo.wav"
-ENT.TurboVolume = 0.5
+ENT.TurboSound = "lvs/vehicles/mzkt/mzkt_trans.wav"
+ENT.TurboVolume = 1.0
 
 ENT.EngineSounds = {
-	{ sound = "lvs/vehicles/kirovets/kirovets_idle.wav",
+	{ sound = "lvs/vehicles/mzkt/mzkt_idle.wav",
 		Volume = 1.0,
-		Pitch = 90,
+		Pitch = 80,
 		PitchMul = 30,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_IDLE_ONLY,
 	},
-	{ sound = "lvs/vehicles/kirovets/kirovets_high.wav",
+	{ sound = "lvs/vehicles/mzkt/mzkt_high.wav",
 		Volume = 1.0,
-		Pitch = 80,
-		PitchMul = 40,
+		Pitch = 60,
+		PitchMul = 50,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_REV_UP,
 	},
-	{ sound = "lvs/vehicles/kirovets/kirovets_low.wav",
+	{ sound = "lvs/vehicles/mzkt/mzkt_low.wav",
 		Volume = 1.0,
-		Pitch = 80,
-		PitchMul = 60,
+		Pitch = 60,
+		PitchMul = 50,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_REV_DOWN,
 	},
