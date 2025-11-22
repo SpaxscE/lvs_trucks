@@ -43,6 +43,7 @@ ENT.SteerSpeed = 1.5
 ENT.SteerReturnSpeed = 1.3
 
 ENT.WheelBrakeLockupRPM = 3
+ENT.WheelBrakeReleaseSound = "lvs/vehicles/generic/truck_brake_release.ogg"
 
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true -- supposed to be turbodiesel already so

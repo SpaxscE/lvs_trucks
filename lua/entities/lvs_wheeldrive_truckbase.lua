@@ -12,7 +12,37 @@ ENT.Category = "[LVS] - Trucks - Pack"
 ENT.Spawnable			= false
 ENT.AdminSpawnable		= false
 
+ENT.WheelBrakeReleaseSound = "lvs/vehicles/generic/truck_brake_release.ogg"
+
 if CLIENT then return end
+
+function ENT:LerpBrake( Brake )
+	local Old = self:GetBrake()
+
+	BaseClass.LerpBrake( self, Brake )
+
+	local New = self:GetBrake()
+
+	self:OnBrakeChanged( Old, New )
+end
+
+function ENT:OnBrakeChanged( Old, New )
+	local BrakeActive = New ~= 0
+
+	if BrakeActive == self._OldBrakeActive then return end
+
+	self._OldBrakeActive = BrakeActive
+
+	for _, wheel in pairs( self:GetWheels() ) do
+		if not IsValid( wheel ) then continue end
+
+		if not BrakeActive and wheel:IsRotationLocked() then
+			self:EmitSound( self.WheelBrakeReleaseSound, 75, math.random(90,110), 0.25 )
+
+			break
+		end
+	end
+end
 
 function ENT:PostInitialize( PObj )
 	BaseClass.PostInitialize( self, PObj )
