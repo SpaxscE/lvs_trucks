@@ -65,7 +65,7 @@ function ENT:SpawnWheels()
 	local Axle1 = self:DefineAxle( {
 		Axle = {
 			ForwardAngle = Angle(),
-			SteerType = LVS.WHEEL_STEER_FRONT,
+			SteerType = LVS.WHEEL_STEER_ACKERMANN,
 			SteerAngle = 30,
 			TorqueFactor = 0.25,
 			BrakeFactor = 1,
@@ -99,7 +99,7 @@ function ENT:SpawnWheels()
 	local Axle2 = self:DefineAxle( {
 		Axle = {
 			ForwardAngle = Angle(),
-			SteerType = LVS.WHEEL_STEER_FRONT,
+			SteerType = LVS.WHEEL_STEER_ACKERMANN,
 			SteerAngle = 15,
 			TorqueFactor = 0.25,
 			BrakeFactor = 1,
