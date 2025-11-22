@@ -4,6 +4,8 @@ AddCSLuaFile( "cl_init.lua" )
 include( "shared.lua" )
 
 function ENT:OnSpawn( pObj )
+	self:SetRacingHud( true )
+
 	-- local Bonnet_Handler = self:AddDoorHandler( "!bonnet",
 	-- Vector( 3.790, 0.000, 1.975) * 40, Angle(),
 	-- Vector(-30,-28,-5), Vector( 30, 28, 5),
@@ -75,7 +77,7 @@ function ENT:SpawnWheels()
 		Suspension = {
 			Height = 5,
 			MaxTravel = 7,
-			SpringConstant = 30000,
+			SpringConstant = 35000,
 			SpringDamping = 2000,
 			SpringRelativeDamping = 2000,
 		},
@@ -109,7 +111,7 @@ function ENT:SpawnWheels()
 		Suspension = {
 			Height = 5,
 			MaxTravel = 7,
-			SpringConstant = 30000,
+			SpringConstant = 35000,
 			SpringDamping = 2000,
 			SpringRelativeDamping = 2000,
 		},
@@ -143,7 +145,7 @@ function ENT:SpawnWheels()
 		Suspension = {
 			Height = 6,
 			MaxTravel = 7,
-			SpringConstant = 35000,
+			SpringConstant = 40000,
 			SpringDamping = 3000,
 			SpringRelativeDamping = 3000,
 		},
@@ -177,7 +179,7 @@ function ENT:SpawnWheels()
 		Suspension = {
 			Height = 6,
 			MaxTravel = 7,
-			SpringConstant = 35000,
+			SpringConstant = 40000,
 			SpringDamping = 3000,
 			SpringRelativeDamping = 3000,
 		},
