@@ -135,6 +135,31 @@ function ENT:AddSupport( data )
     table.insert( self.SupportEntities, SupportEntity )
 end
 
+DEFINE_BASECLASS( "lvs_base_wheeldrive_trailer" )
+function ENT:OnCoupleChanged( targetVehicle, targetHitch, active )
+	BaseClass.OnCoupleChanged( self, targetVehicle, targetHitch, active )
+
+	if not IsValid( targetVehicle ) then return end
+
+	local Seats = targetVehicle:GetPassengerSeats()
+	table.insert( Seats, targetVehicle:GetDriverSeat() )
+
+	for _, Pod in pairs( Seats ) do
+		if not IsValid( Pod ) then continue end
+
+		local CurDist = Pod:GetCameraDistance()
+
+		if active then
+			Pod._OldCamDistance = CurDist
+			Pod:SetCameraDistance( 1 )
+		else
+			if Pod._OldCamDistance then
+				Pod:SetCameraDistance( Pod._OldCamDistance )
+			end
+		end
+	end
+end
+
 function ENT:OnCoupled( targetVehicle, targetHitch )
 	self:SetSupports( false )
 
