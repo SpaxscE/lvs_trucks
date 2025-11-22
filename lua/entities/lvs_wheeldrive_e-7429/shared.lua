@@ -35,8 +35,8 @@ ENT.BrakeRate = 0.3
 
 ENT.TransGears = 4
 ENT.TransGearsReverse = 1
-ENT.TransShiftSpeed = 0.5
-ENT.TransShiftTorqueFactor = 0.6
+ENT.TransShiftSpeed = 1.0
+ENT.TransShiftTorqueFactor = 0.4
 ENT.TransMinGearHoldTime = 0.5
 
 ENT.SteerSpeed = 1.2
@@ -80,7 +80,7 @@ ENT.EngineSounds = {
 	{ sound = "lvs/vehicles/kirovets/kirovets_low.wav",
 		Volume = 1.0,
 		Pitch = 80,
-		PitchMul = 40,
+		PitchMul = 60,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_REV_DOWN,
 	},
