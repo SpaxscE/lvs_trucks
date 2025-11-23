@@ -28,10 +28,10 @@ ENT.EngineMaxRPM = 3250
 ENT.ThrottleRate = 0.3
 ENT.BrakeRate = 0.5
 
--- ENT.EngineIgnitionTime = 0.8
--- ENT.EngineStartStopVolume = 0.5
--- ENT.EngineStartSound = "lmx/vehicles/m2_halftrack/start.wav"
--- ENT.EngineStopSound = "lmx/vehicles/m2_halftrack/stop.wav"
+ENT.EngineIgnitionTime = 1.0
+ENT.EngineStartStopVolume = 1.0
+ENT.EngineStartSound = "lvs/vehicles/kraz/kraz_start.wav"
+ENT.EngineStopSound = "lvs/vehicles/kraz/kraz_stop.wav"
 
 ENT.TransGears = 5
 ENT.TransGearsReverse = 1
@@ -47,7 +47,7 @@ ENT.WheelBrakeApplySound = "LVS.Brake.Apply"
 ENT.WheelBrakeReleaseSound = "LVS.Brake.Release"
 
 ENT.AllowSuperCharger = false
-ENT.AllowTurbo = true -- supposed to be turbodiesel already so
+ENT.AllowTurbo = true
 
 ENT.PhysicsInertia = Vector( 8000, 2000, 8000)
 

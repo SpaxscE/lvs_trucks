@@ -41,3 +41,7 @@ function ENT:UpdatePoseParameters( steer, speed_kmh, engine_rpm, throttle, brake
 
 	self:SetPoseParameter( "shaft", EntTable.ShaftRotation )
 end
+
+-- I have to add this because otherwise it plays the default sound - fix how
+function ENT:OnEngineActiveChanged( Active )
+end
