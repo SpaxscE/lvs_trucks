@@ -65,21 +65,24 @@ ENT.TurboSound = "lvs/vehicles/generic/truck_turbo.wav"
 ENT.TurboVolume = 1.0
 
 ENT.EngineSounds = {
-	{ sound = "lvs/vehicles/kraz/kraz_idle.wav",
+	{
+		sound = "lvs/vehicles/kraz/kraz_idle.wav",
 		Volume = 1.0,
 		Pitch = 90,
 		PitchMul = 30,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_IDLE_ONLY,
 	},
-	{ sound = "lvs/vehicles/kraz/kraz_high_off.wav",
+	{
+		sound = "lvs/vehicles/kraz/kraz_high_off.wav",
 		Volume = 1.0,
 		Pitch = 60,
 		PitchMul = 50,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_REV_UP,
 	},
-	{ sound = "lvs/vehicles/kraz/kraz_high.wav",
+	{
+		sound = "lvs/vehicles/kraz/kraz_high.wav",
 		Volume = 1.0,
 		Pitch = 60,
 		PitchMul = 50,
