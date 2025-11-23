@@ -186,3 +186,43 @@ function ENT:SpawnWheels()
 	-- self:CreateRigControler( "4l", Wheel4L, 40 * 0.835, 40 * 0.480 )
 	-- self:CreateRigControler( "4r", Wheel4R, 40 * 0.835, 40 * 0.480 )
 end
+
+function ENT:HandleStart()
+	local Driver = self:GetDriver()
+
+	if IsValid( Driver ) then
+        self.TimeKeyReload = isnumber( self.TimeKeyReload ) and self.TimeKeyReload or -2
+		local KeyReload = Driver:lvsKeyDown( "ENGINE" )
+
+        local Engine = self:GetEngine() -- emit sound from the engine
+
+		if self.OldKeyReload ~= KeyReload then
+			self.OldKeyReload = KeyReload
+
+			if KeyReload then
+                if ( self:GetEngineActive() ) then
+                    self:StopEngine()
+
+                    Engine:EmitSound( self.EngineStopSound, 75, 100, self.EngineStartStopVolume )
+                else
+                    self.TimeKeyReload = CurTime()
+
+                    Engine:EmitSound( self.EngineStartSound, 75, 100, self.EngineStartStopVolume )
+                end
+			else
+                if ( not self:GetEngineActive() and self.TimeKeyReload >= -1 ) then
+                    self.TimeKeyReload = -1
+
+                    Engine:StopSound( self.EngineStartSound )
+                    Engine:EmitSound( self.EngineStopSound, 75, 100, self.EngineStartStopVolume * 0.2 )
+                end
+            end
+		else
+            if ( self.TimeKeyReload > -1 and self.TimeKeyReload < CurTime() - self.EngineIgnitionTime ) then
+                self:StartEngine()
+
+                self.TimeKeyReload = -1
+            end
+        end
+	end
+end

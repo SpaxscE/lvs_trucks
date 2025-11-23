@@ -38,3 +38,6 @@ function ENT:UpdatePoseParameters( steer, speed_kmh, engine_rpm, throttle, brake
         end
     end
 end
+
+function ENT:OnEngineActiveChanged( Active )
+end

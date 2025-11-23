@@ -28,10 +28,10 @@ ENT.EngineMaxRPM = 3250
 ENT.ThrottleRate = 0.3
 ENT.BrakeRate = 0.5
 
--- ENT.EngineIgnitionTime = 0.8
--- ENT.EngineStartStopVolume = 0.5
--- ENT.EngineStartSound = "lmx/vehicles/m2_halftrack/start.wav"
--- ENT.EngineStopSound = "lmx/vehicles/m2_halftrack/stop.wav"
+ENT.EngineIgnitionTime = 1.7
+ENT.EngineStartStopVolume = 1.0
+ENT.EngineStartSound = "lvs/vehicles/mzkt/mzkt_start.wav"
+ENT.EngineStopSound = "lvs/vehicles/mzkt/mzkt_stop.wav"
 
 ENT.TransGears = 4
 ENT.TransGearsReverse = 1
