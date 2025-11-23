@@ -39,108 +39,38 @@ sound.Add( {
 } )
 
 if CLIENT then
-
-	ENT.IconEngine = Material( "lvs/engine.png" )
-	ENT.IconFuel = Material( "lvs/fuel.png" )
-
-	local WaveScale = 0
-	local WaveMaterial = Material( "effects/select_ring" )
-	local oldThrottleActive = false
-	local oldReverse = false
-	local oldGear = -1
-
 	function ENT:LVSHudPaintInfoText( X, Y, W, H, ScrX, ScrY, ply )
-		if self:GetRacingHud() then return end
-
-		local EntTable = self:GetTable()
-
-		local T = CurTime()
-
-		if (EntTable._nextRefreshVel or 0) < T then
-			EntTable._nextRefreshVel = T + 0.1
-			EntTable._refreshVel = self:GetVelocity():Length()
-		end
-
-		local kmh = math.Round( (EntTable._refreshVel or 0) * 0.09144,0)
-		draw.DrawText( "km/h ", "LVS_FONT", X + 72, Y + 35, color_white, TEXT_ALIGN_RIGHT )
-		draw.DrawText( kmh, "LVS_FONT_HUD_LARGE", X + 72, Y + 20, color_white, TEXT_ALIGN_LEFT )
-
-		if ply ~= self:GetDriver() then return end
+		BaseClass.LVSHudPaintInfoText( self, X, Y, W, H, ScrX, ScrY, ply )
 
 		local Throttle = self:GetThrottle()
 		local MaxThrottle = self:GetMaxThrottle()
 
-		if MaxThrottle < 1 and Throttle > 0 then
-			Throttle = math.min( Throttle / MaxThrottle, 1 )
+		if self:GetRacingHud() or MaxThrottle >= 0.99 then return end
+
+		if MaxThrottle <= 0.51 then
+			MaxThrottle = math.min(Throttle,MaxThrottle)
 		end
 
-		local Col = Throttle <= 1 and color_white or Color(0,0,0,255)
 		local hX = X + W - H * 0.5
 		local hY = Y + H * 0.25 + H * 0.25
+		local radius = H * 0.35
 
-		local fueltank = self:GetFuelTank()
+		local rad1 = radius * 0.8
+		local rad2 = radius * 1.2
 
-		if IsValid( fueltank ) and fueltank:GetFuel() <= 0 then
-			surface.SetMaterial( EntTable.IconFuel )
-		else
-			surface.SetMaterial( EntTable.IconEngine )
-		end
+		local ang = math.rad( 92 + MaxThrottle * 360 )
 
-		surface.SetDrawColor( 0, 0, 0, 200 )
-		surface.DrawTexturedRectRotated( hX + 4, hY + 1, H * 0.5, H * 0.5, 0 )
-		surface.SetDrawColor( color_white )
-		surface.DrawTexturedRectRotated( hX + 2, hY - 1, H * 0.5, H * 0.5, 0 )
+		surface.SetDrawColor( 255, 0, 0, 255 )
 
-		if not self:GetEngineActive() then
-			draw.SimpleText( "X" , "LVS_FONT",  hX, hY, Color(0,0,0,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
-		else
-			oldThrottleActive = false
-		
-			local Reverse = self:GetReverse()
+		for i = -8,8 do
+			local printang = ang + math.rad( i * 0.35 )
 
-			if oldReverse ~= Reverse then
-				oldReverse = Reverse
+			local startX = hX + math.cos( printang ) * rad1
+			local startY = hY + math.sin( printang ) * rad1
+			local endX = hX + math.cos( printang ) * rad2
+			local endY = hY + math.sin( printang ) * rad2
 
-				WaveScale = 1
-			end
-
-			local IsManual = self:IsManualTransmission()
-			local Gear = self:GetGear()
-
-			if oldGear ~= Gear then
-				oldGear = Gear
-
-				WaveScale = 1
-			end
-
-			if WaveScale > 0 then
-				WaveScale = math.max( WaveScale - RealFrameTime() * 2, 0 )
-
-				local WaveRadius = (1 - WaveScale) * H * 1.5
-
-				surface.SetDrawColor( 0, 127, 255, 255 * WaveScale ^ 2 )
-				surface.SetMaterial( WaveMaterial )
-
-				surface.DrawTexturedRectRotated( hX, hY, WaveRadius, WaveRadius, 0 )
-
-				if not Reverse and not IsManual then
-					draw.SimpleText( "D" , "LVS_FONT",  hX, hY, Color(0,0,0,math.min(800 * WaveScale ^ 2,255)), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
-				end
-			end
-
-			if IsManual then
-				draw.SimpleText( (Reverse and -1 or 1) * Gear , "LVS_FONT",  hX, hY, Color(0,0,0,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
-			else
-				if Reverse then
-					draw.SimpleText( "R" , "LVS_FONT",  hX, hY, Color(0,0,0,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
-				end
-			end
-		end
-
-		self:LVSDrawCircle( hX, hY, H * 0.35, math.min( Throttle, 1 ) )
-
-		if Throttle > 1 then
-			draw.SimpleText( "+"..math.Round((Throttle - 1) * 100,0).."%" , "LVS_FONT",  hX, hY, Col, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+			surface.DrawLine( startX, startY, endX, endY )
 		end
 	end
 
