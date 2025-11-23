@@ -1,0 +1,11 @@
+VertexLitGeneric
+{
+	$basetexture 				"models/thegordonbeeman/_spintires/models_wood01_bt"
+	// $bumpmap 					"models/thegordonbeeman/_spintires/trucks_trailer_tent_bm"
+
+	// $phong 						"1"
+	// $phongboost 				"3.0"
+	// $phongexponent				"15.0"
+	// $phongfresnelranges			"[0.2 0.25 1.0]"
+	// $phongalbedotint			"1"
+}
