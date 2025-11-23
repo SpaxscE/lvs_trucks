@@ -167,6 +167,10 @@ function ENT:SpawnWheels()
 		mdl_ang = Angle(0,-90),
 		radius = 0.769 * 40,
 	} )
+
+	self:SetNWEntity( "DriveWheel1", Wheel4L )
+	self:SetNWEntity( "DriveWheel2", Wheel4R )
+
 	local Axle4 = self:DefineAxle( {
 		Axle = {
 			ForwardAngle = Angle(),

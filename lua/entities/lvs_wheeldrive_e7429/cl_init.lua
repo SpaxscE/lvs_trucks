@@ -30,12 +30,18 @@ function ENT:UpdatePoseParameters( steer, speed_kmh, engine_rpm, throttle, brake
 
 	local EntTable = self:GetTable()
 
+	local DriveWheel1 = self:GetNWEntity( "DriveWheel1" )
+	local DriveWheel2 = self:GetNWEntity( "DriveWheel2" )
+
 	local RPM = 0
-	for _, wheel in pairs( self:GetWheels() ) do
-		RPM = RPM - wheel:GetRPM()
+	if IsValid( DriveWheel1 ) then
+		RPM = RPM - DriveWheel1:GetRPM()
+	end
+	if IsValid( DriveWheel2 ) then
+		RPM = RPM - DriveWheel2:GetRPM()
 	end
 
-	EntTable.ShaftRotation = (EntTable.ShaftRotation or 0) + RPM * FrameTime() * 2
+	EntTable.ShaftRotation = (EntTable.ShaftRotation or 0) + RPM * FrameTime() * 6
 
 	if EntTable.ShaftRotation > 360 then EntTable.ShaftRotation = EntTable.ShaftRotation - 360 end
 	if EntTable.ShaftRotation < -360 then EntTable.ShaftRotation = EntTable.ShaftRotation + 360 end
