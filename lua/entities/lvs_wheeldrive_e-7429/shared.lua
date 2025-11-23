@@ -97,18 +97,7 @@ ENT.ExhaustPositions = {
 }
 
 ENT.Lights = {
-	{	Trigger = "high" }, -- only main otherwise
-	{	Trigger = "main+high",
-		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#main+high",
-		SubMaterialBrightness = 0.5,
-		Sprites = {
-			{	pos = Vector( 4.647, 1.187, 1.074) * 40,
-				colorB = 200, colorA = 100,
-			},
-			{	pos = Vector( 4.647,-1.204, 1.074) * 40,
-				colorB = 200, colorA = 100,
-			},
-		},
+	{	Trigger = "main",
 		ProjectedTextures = {
 			{
 				pos = Vector( 4.647, 1.187, 1.074) * 40, ang = Angle(),
@@ -119,6 +108,32 @@ ENT.Lights = {
 				pos = Vector( 4.647,-1.187, 1.074) * 40, ang = Angle(),
 				colorB = 200, colorA = 100,
 				shadows = true,
+			},
+		},
+	},
+	{	Trigger = "high",
+		ProjectedTextures = {
+			{
+				pos = Vector( 4.647, 1.187, 1.074) * 40, ang = Angle(),
+				colorB = 200, colorA = 100,
+				shadows = true,
+			},
+			{
+				pos = Vector( 4.647,-1.187, 1.074) * 40, ang = Angle(),
+				colorB = 200, colorA = 100,
+				shadows = true,
+			},
+		},
+	},
+	{	Trigger = "main+high",
+		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#main+high",
+		SubMaterialBrightness = 0.5,
+		Sprites = {
+			{	pos = Vector( 4.647, 1.187, 1.074) * 40,
+				colorB = 200, colorA = 100,
+			},
+			{	pos = Vector( 4.647,-1.204, 1.074) * 40,
+				colorB = 200, colorA = 100,
 			},
 		},
 	},
