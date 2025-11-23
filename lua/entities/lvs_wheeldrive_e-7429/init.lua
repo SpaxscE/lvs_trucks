@@ -81,8 +81,8 @@ function ENT:SpawnWheels()
 		},
 	} )
 
-	-- self:CreateRigControler( "1l", Wheel1L, 40 * 0.835, 40 * 0.480 )
-	-- self:CreateRigControler( "1r", Wheel1R, 40 * 0.835, 40 * 0.480 )
+	self:CreateRigControler( "1l", Wheel1L, 40 * 0.650, 40 * 0.500 )
+	self:CreateRigControler( "1r", Wheel1R, 40 * 0.650, 40 * 0.500 )
 
     local Wheel2L = self:AddWheel( {
 		pos = Vector( 0.526, 1.244, 0.591) * 40,
@@ -115,17 +115,17 @@ function ENT:SpawnWheels()
 		},
 	} )
 
-	-- self:CreateRigControler( "2l", Wheel2L, 40 * 0.835, 40 * 0.480 )
-	-- self:CreateRigControler( "2r", Wheel2R, 40 * 0.835, 40 * 0.480 )
+	self:CreateRigControler( "2l", Wheel2L, 40 * 0.650, 40 * 0.500 )
+	self:CreateRigControler( "2r", Wheel2R, 40 * 0.650, 40 * 0.500 )
 
     local Wheel3L = self:AddWheel( {
-		pos = Vector(-2.108, 1.244, 0.591) * 40,
+		pos = Vector(-2.108, 1.244, 0.700) * 40,--0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
         radius = 0.769 * 40,
 	} )
     local Wheel3R = self:AddWheel( {
-		pos = Vector(-2.108,-1.244, 0.591) * 40,
+		pos = Vector(-2.108,-1.244, 0.700) * 40,--0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
         radius = 0.769 * 40,
@@ -141,25 +141,25 @@ function ENT:SpawnWheels()
 		},
 		Wheels = { Wheel3L, Wheel3R },
 		Suspension = {
-			Height = 6,
-			MaxTravel = 7,
+			Height = 7,
+			MaxTravel = 10,
 			SpringConstant = 40000,
 			SpringDamping = 3000,
 			SpringRelativeDamping = 3000,
 		},
 	} )
 
-	-- self:CreateRigControler( "3l", Wheel3L, 40 * 0.835, 40 * 0.480 )
-	-- self:CreateRigControler( "3r", Wheel3R, 40 * 0.835, 40 * 0.480 )
+	self:CreateRigControler( "3l", Wheel3L, 40 * 0.887, 40 * 0.593 )
+	self:CreateRigControler( "3r", Wheel3R, 40 * 0.887, 40 * 0.593 )
 
     local Wheel4L = self:AddWheel( {
-		pos = Vector(-3.806, 1.244, 0.591) * 40,
+		pos = Vector(-3.806, 1.244, 0.700) * 40,--0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
         radius = 0.769 * 40,
 	} )
     local Wheel4R = self:AddWheel( {
-		pos = Vector(-3.806,-1.244, 0.591) * 40,
+		pos = Vector(-3.806,-1.244, 0.700) * 40,--0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
         radius = 0.769 * 40,
@@ -175,16 +175,16 @@ function ENT:SpawnWheels()
 		},
 		Wheels = { Wheel4L, Wheel4R },
 		Suspension = {
-			Height = 6,
-			MaxTravel = 7,
+			Height = 7,
+			MaxTravel = 10,
 			SpringConstant = 40000,
 			SpringDamping = 3000,
 			SpringRelativeDamping = 3000,
 		},
 	} )
 
-	-- self:CreateRigControler( "4l", Wheel4L, 40 * 0.835, 40 * 0.480 )
-	-- self:CreateRigControler( "4r", Wheel4R, 40 * 0.835, 40 * 0.480 )
+	self:CreateRigControler( "4l", Wheel4L, 40 * 0.887, 40 * 0.593 )
+	self:CreateRigControler( "4r", Wheel4R, 40 * 0.887, 40 * 0.593 )
 end
 
 function ENT:HandleStart()
