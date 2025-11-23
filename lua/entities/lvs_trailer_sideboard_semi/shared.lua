@@ -18,7 +18,8 @@ function ENT:OnSetupDataTables()
 end
 
 ENT.Lights = {
-	{   Trigger = "active",
+	{
+		Trigger = "active",
 		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#active",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -66,7 +67,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "turnleft",
+	{
+		Trigger = "turnleft",
 		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#turnleft",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -76,7 +78,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "turnright",
+	{
+		Trigger = "turnright",
 		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#turnright",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -86,7 +89,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "main+brake",
+	{
+		Trigger = "main+brake",
 		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#main+brake",
 		SubMaterialBrightness = 0.5,
 		Sprites = {

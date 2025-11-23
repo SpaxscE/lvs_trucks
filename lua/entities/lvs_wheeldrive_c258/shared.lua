@@ -100,7 +100,8 @@ ENT.ExhaustPositions = {
 }
 
 ENT.Lights = {
-	{	Trigger = "main",
+	{
+		Trigger = "main",
 		ProjectedTextures = {
 			{
 				pos = Vector( 4.466, 0.716, 1.508) * 40, ang = Angle(),
@@ -114,7 +115,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "high",
+	{
+		Trigger = "high",
 		ProjectedTextures = {
 			{
 				pos = Vector( 4.466, 0.716, 1.508) * 40, ang = Angle(),
@@ -128,7 +130,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "main+high",
+	{
+		Trigger = "main+high",
 		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#main+high",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -140,7 +143,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{   Trigger = "active",
+	{
+		Trigger = "active",
 		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#active",
 		SubMaterialBrightness = 0.2,
 		Sprites = {
@@ -154,7 +158,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{   Trigger = "active",
+	{
+		Trigger = "active",
 		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#active2",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -172,7 +177,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "turnleft",
+	{
+		Trigger = "turnleft",
 		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#turnleft",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -182,7 +188,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "turnright",
+	{
+		Trigger = "turnright",
 		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#turnright",
 		SubMaterialBrightness = 0.5,
 		Sprites = {

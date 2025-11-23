@@ -65,21 +65,24 @@ ENT.TurboSound = "lvs/vehicles/mzkt/mzkt_trans.wav"
 ENT.TurboVolume = 1.0
 
 ENT.EngineSounds = {
-	{ sound = "lvs/vehicles/mzkt/mzkt_idle.wav",
+	{
+		sound = "lvs/vehicles/mzkt/mzkt_idle.wav",
 		Volume = 1.0,
 		Pitch = 80,
 		PitchMul = 30,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_IDLE_ONLY,
 	},
-	{ sound = "lvs/vehicles/mzkt/mzkt_high.wav",
+	{
+		sound = "lvs/vehicles/mzkt/mzkt_high.wav",
 		Volume = 1.0,
 		Pitch = 60,
 		PitchMul = 50,
 		SoundLevel = 80,
 		SoundType = LVS.SOUNDTYPE_REV_UP,
 	},
-	{ sound = "lvs/vehicles/mzkt/mzkt_low.wav",
+	{
+		sound = "lvs/vehicles/mzkt/mzkt_low.wav",
 		Volume = 1.0,
 		Pitch = 60,
 		PitchMul = 50,
@@ -97,7 +100,8 @@ ENT.ExhaustPositions = {
 }
 
 ENT.Lights = {
-	{	Trigger = "main",
+	{
+		Trigger = "main",
 		ProjectedTextures = {
 			{
 				pos = Vector( 4.647, 1.187, 1.074) * 40, ang = Angle(),
@@ -111,7 +115,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "high",
+	{
+		Trigger = "high",
 		ProjectedTextures = {
 			{
 				pos = Vector( 4.647, 1.187, 1.074) * 40, ang = Angle(),
@@ -125,7 +130,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "main+high",
+	{
+		Trigger = "main+high",
 		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#main+high",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -137,7 +143,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{   Trigger = "active",
+	{
+		Trigger = "active",
 		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#active",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -173,7 +180,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "main+brake",
+	{
+		Trigger = "main+brake",
 		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#main+brake",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -187,7 +195,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "turnleft",
+	{
+		Trigger = "turnleft",
 		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#turnleft",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
@@ -205,7 +214,8 @@ ENT.Lights = {
 			},
 		},
 	},
-	{	Trigger = "turnright",
+	{
+		Trigger = "turnright",
 		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#turnright",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
