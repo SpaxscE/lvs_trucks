@@ -13,6 +13,12 @@ ENT.AdminSpawnable		= false
 
 ENT.MDL = "models/thegordonbeeman/vehicles/lowboy_semi-trailer.mdl"
 
+ENT.PhysicsWeightScale = 1.2
+
+ENT.WheelPhysicsMass = 120
+ENT.WheelPhysicsInertia = Vector( 30, 10, 30)
+ENT.WheelPhysicsTireHeight = 16
+
 function ENT:OnSetupDataTables()
 	self:AddDT( "Bool", "Supports" )
 end
