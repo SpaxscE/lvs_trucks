@@ -44,7 +44,7 @@ ENT.EngineStopSound = "lvs/vehicles/mzkt/mzkt_stop.wav"
 ENT.TransGears = 4
 ENT.TransGearsReverse = 1
 ENT.TransShiftSpeed = 1.0
-ENT.TransShiftTorqueFactor = 0.5
+ENT.TransShiftTorqueFactor = 0.7
 ENT.TransMinGearHoldTime = 1
 
 ENT.SteerSpeed = 1.0
