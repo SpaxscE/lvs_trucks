@@ -41,10 +41,14 @@ function ENT:UpdatePoseParameters( steer, speed_kmh, engine_rpm, throttle, brake
 		RPM = RPM - DriveWheel2:GetRPM()
 	end
 
-	EntTable.ShaftRotation = (EntTable.ShaftRotation or 0) + RPM * FrameTime() * 6
+	if ( self:GetSirenMode() > 0 ) then
+	    self:SetPoseParameter( "siren_spin", CurTime() * 600 + self:EntIndex() * 1337 )
+    end
 
-	if EntTable.ShaftRotation > 360 then EntTable.ShaftRotation = EntTable.ShaftRotation - 360 end
-	if EntTable.ShaftRotation < -360 then EntTable.ShaftRotation = EntTable.ShaftRotation + 360 end
+	EntTable.ShaftRotation = ( EntTable.ShaftRotation or 0 ) + RPM * FrameTime() * 6
+
+	if ( EntTable.ShaftRotation > 360 ) then EntTable.ShaftRotation = EntTable.ShaftRotation - 360 end
+	if ( EntTable.ShaftRotation < -360 ) then EntTable.ShaftRotation = EntTable.ShaftRotation + 360 end
 
 	self:SetPoseParameter( "shaft", EntTable.ShaftRotation )
 end

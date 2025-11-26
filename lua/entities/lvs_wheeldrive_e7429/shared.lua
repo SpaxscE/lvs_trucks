@@ -107,6 +107,14 @@ ENT.ExhaustPositions = {
 	},
 }
 
+ENT.SirenPos = Vector()
+ENT.SirenSound = {
+	[1] = {
+		siren = "lvs/siren1.wav",
+		horn = "lvs/siren3.wav",
+	},
+}
+
 ENT.Lights = {
 	{
 		Trigger = "main",
@@ -252,4 +260,20 @@ ENT.Lights = {
 			},
 		},
 	},
+	{
+		Siren = true,
+		Trigger = "1",
+		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#siren",
+		SubMaterialBrightness = 0.5,
+		Sprites = {
+			{	pos = "light_att1",
+				colorG = 90, colorB = 50, colorA = 50,
+				width = 50, height = 50,
+			},
+			{	pos = "light_att1",
+				colorG = 90, colorB = 80, colorA = 255,
+				width = 15, height = 15,
+			},
+        },
+    },
 }
