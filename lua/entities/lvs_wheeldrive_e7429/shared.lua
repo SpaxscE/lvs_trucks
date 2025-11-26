@@ -27,7 +27,7 @@ ENT.SteerAssistExponent = 1
 ENT.SteerAssistMultiplier = 0
 
 ENT.EngineCurve = 0.8
-ENT.EngineCurveBoostLow = 3
+ENT.EngineCurveBoostLow = 5
 ENT.EngineTorque = 120
 
 ENT.EngineIdleRPM = 500
