@@ -237,4 +237,19 @@ ENT.Lights = {
 			},
 		},
 	},
+	{
+		Trigger = "reverse",
+		SubMaterialID = "models/thegordonbeeman/vehicles/e-7429/light#reverse",
+		SubMaterialBrightness = 0.5,
+		Sprites = {
+			{	pos = Vector(-4.696, 0.755, 1.200) * 40,
+				colorA = 100,
+				width = 30, height = 30,
+			},
+			{	pos = Vector( 0.064,-0.721, 2.324) * 40,
+				colorA = 100,
+				width = 35, height = 35,
+			},
+		},
+	},
 }

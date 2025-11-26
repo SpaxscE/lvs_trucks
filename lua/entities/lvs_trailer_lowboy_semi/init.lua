@@ -24,13 +24,13 @@ function ENT:SpawnWheels()
 	local WheelModel = "models/thegordonbeeman/vehicles/lowboy_semi-trailer_wheel.mdl"
 
 	local Wheel1L = self:AddWheel( {
-		pos = Vector(-2.235, 1.240, 0.450) * 40,
+		pos = Vector(-2.235, 1.240, 0.470) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.499 * 40,
 	} )
 	local Wheel1R = self:AddWheel( {
-		pos = Vector(-2.235,-1.244, 0.450) * 40,
+		pos = Vector(-2.235,-1.244, 0.470) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.499 * 40,
@@ -54,13 +54,13 @@ function ENT:SpawnWheels()
 	-- self:CreateRigControler( "1r", Wheel1R, 40 * 0.714, 40 * 0.398 )
 
 	local Wheel2L = self:AddWheel( {
-		pos = Vector(-3.408, 1.240, 0.450) * 40,
+		pos = Vector(-3.408, 1.240, 0.470) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.499 * 40,
 	} )
 	local Wheel2R = self:AddWheel( {
-		pos = Vector(-3.408,-1.244, 0.450) * 40,
+		pos = Vector(-3.408,-1.244, 0.470) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.499 * 40,
@@ -84,13 +84,13 @@ function ENT:SpawnWheels()
 	-- self:CreateRigControler( "2r", Wheel2R, 40 * 0.714, 40 * 0.398 )
 
 	local Wheel3L = self:AddWheel( {
-		pos = Vector(-4.583, 1.240, 0.450) * 40,
+		pos = Vector(-4.583, 1.240, 0.470) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.499 * 40,
 	} )
 	local Wheel3R = self:AddWheel( {
-		pos = Vector(-4.583,-1.244, 0.450) * 40,
+		pos = Vector(-4.583,-1.244, 0.470) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.499 * 40,
