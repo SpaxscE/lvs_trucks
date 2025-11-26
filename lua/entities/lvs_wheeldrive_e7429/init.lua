@@ -70,17 +70,18 @@ function ENT:SpawnWheels()
 			ForwardAngle = Angle(),
 			SteerType = LVS.WHEEL_STEER_ACKERMANN,
 			SteerAngle = 30,
-			TorqueFactor = 0.25,
+			TorqueFactor = 0.2,
 			BrakeFactor = 1,
 			UseHandbrake = false,
 		},
-			Wheels = { Wheel1L, Wheel1R },
-			Suspension = {
+		Wheels = { Wheel1L, Wheel1R },
+		Suspension = {
 			Height = 5,
 			MaxTravel = 7,
-			SpringConstant = 35000,
-			SpringDamping = 2000,
-			SpringRelativeDamping = 2000,
+			ControlArmLength = 250,
+			SpringConstant = 50000,
+			SpringDamping = 6000,
+			SpringRelativeDamping = 100,
 		},
 	} )
 
@@ -104,17 +105,18 @@ function ENT:SpawnWheels()
 			ForwardAngle = Angle(),
 			SteerType = LVS.WHEEL_STEER_ACKERMANN,
 			SteerAngle = 15,
-			TorqueFactor = 0.25,
+			TorqueFactor = 0.2,
 			BrakeFactor = 1,
 			UseHandbrake = false,
 		},
 		Wheels = { Wheel2L, Wheel2R },
-			Suspension = {
+		Suspension = {
 			Height = 5,
 			MaxTravel = 7,
-			SpringConstant = 35000,
-			SpringDamping = 2000,
-			SpringRelativeDamping = 2000,
+			ControlArmLength = 250,
+			SpringConstant = 50000,
+			SpringDamping = 6000,
+			SpringRelativeDamping = 100,
 		},
 	} )
 
@@ -138,17 +140,18 @@ function ENT:SpawnWheels()
 			ForwardAngle = Angle(),
 			SteerType = LVS.WHEEL_STEER_NONE,
 			SteerAngle = 0,
-			TorqueFactor = 0.25,
+			TorqueFactor = 0.4,
 			BrakeFactor = 1,
 			UseHandbrake = true,
 		},
-			Wheels = { Wheel3L, Wheel3R },
-			Suspension = {
-			Height = 7,
+		Wheels = { Wheel3L, Wheel3R },
+		Suspension = {
+			Height = 10,
 			MaxTravel = 10,
-			SpringConstant = 40000,
-			SpringDamping = 3000,
-			SpringRelativeDamping = 3000,
+			ControlArmLength = 250,
+			SpringConstant = 50000,
+			SpringDamping = 6000,
+			SpringRelativeDamping = 100,
 		},
 	} )
 
@@ -176,17 +179,18 @@ function ENT:SpawnWheels()
 			ForwardAngle = Angle(),
 			SteerType = LVS.WHEEL_STEER_NONE,
 			SteerAngle = 0,
-			TorqueFactor = 0.25,
+			TorqueFactor = 0.4,
 			BrakeFactor = 1,
 			UseHandbrake = true,
 		},
 		Wheels = { Wheel4L, Wheel4R },
-			Suspension = {
-			Height = 7,
+		Suspension = {
+			Height = 10,
 			MaxTravel = 10,
-			SpringConstant = 40000,
-			SpringDamping = 3000,
-			SpringRelativeDamping = 3000,
+			ControlArmLength = 250,
+			SpringConstant = 50000,
+			SpringDamping = 6000,
+			SpringRelativeDamping = 100,
 		},
 	} )
 

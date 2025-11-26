@@ -13,10 +13,17 @@ ENT.AdminSpawnable		= false
 
 ENT.MDL = "models/thegordonbeeman/vehicles/lowboy_semi-trailer.mdl"
 
-ENT.PhysicsWeightScale = 1.2
+ENT.MassCenterOverride = Vector(-80,0,40)
 
-ENT.WheelPhysicsMass = 120
-ENT.WheelPhysicsInertia = Vector( 30, 10, 30)
+ENT.PhysicsWeightScale = 3
+ENT.PhysicsDampingSpeed = 50
+ENT.PhysicsDampingForward = true
+ENT.PhysicsDampingReverse = true
+
+ENT.PhysicsInertia = Vector(1500,1500,1500)
+
+ENT.WheelPhysicsMass = 100
+ENT.WheelPhysicsInertia = Vector(14,14,14)
 ENT.WheelPhysicsTireHeight = 16
 
 function ENT:OnSetupDataTables()

@@ -16,11 +16,19 @@ ENT.MDL = "models/thegordonbeeman/vehicles/e-7429.mdl"
 ENT.MaxVelocity = 500
 ENT.MaxVelocityReverse = 100
 
-ENT.PhysicsWeightScale = 2.0
+ENT.PhysicsWeightScale = 5
+ENT.PhysicsDampingSpeed = 50
+ENT.PhysicsDampingForward = true
+ENT.PhysicsDampingReverse = true
+
+ENT.SteerAssistDeadZoneAngle = 10
+ENT.SteerAssistMaxAngle = 0
+ENT.SteerAssistExponent = 1
+ENT.SteerAssistMultiplier = 0
 
 ENT.EngineCurve = 1
-ENT.EngineCurveBoostLow = 5.0
-ENT.EngineTorque = 50
+ENT.EngineCurveBoostLow = 3
+ENT.EngineTorque = 120
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
@@ -49,16 +57,16 @@ ENT.WheelBrakeReleaseSound = "LVS.Brake.Release"
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true
 
-ENT.PhysicsInertia = Vector( 12000, 2000, 12000)
+ENT.PhysicsInertia = Vector(1500,1500,1500)
 
-ENT.WheelPhysicsMass = 120
-ENT.WheelPhysicsInertia = Vector( 30, 10, 30)
+ENT.WheelPhysicsMass = 100
+ENT.WheelPhysicsInertia = Vector(14,14,14)
 ENT.WheelPhysicsTireHeight = 16
 
-ENT.WheelBrakeForce = 400
+ENT.WheelBrakeForce = 700
 
 ENT.WheelSideForce = 800
-ENT.WheelDownForce = 2500
+ENT.WheelDownForce = 5000
 
 ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/mzkt/mzkt_trans.wav"
