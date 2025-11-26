@@ -26,7 +26,7 @@ ENT.SteerAssistMaxAngle = 0
 ENT.SteerAssistExponent = 1
 ENT.SteerAssistMultiplier = 0
 
-ENT.EngineCurve = 1
+ENT.EngineCurve = 0.8
 ENT.EngineCurveBoostLow = 3
 ENT.EngineTorque = 120
 
