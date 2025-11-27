@@ -29,7 +29,7 @@ ENT.SteerAssistMultiplier = 0
 ENT.PhysicsWeightScale = 2.5
 
 ENT.EngineCurve = 0.8
-ENT.EngineCurveBoostLow = 3
+ENT.EngineCurveBoostLow = 6
 ENT.EngineTorque = 70
 
 ENT.EngineIdleRPM = 500
@@ -70,7 +70,7 @@ ENT.WheelPhysicsTireHeight = 8.77
 ENT.WheelBrakeForce = 400
 
 ENT.WheelSideForce = 800
-ENT.WheelDownForce = 1000
+ENT.WheelDownForce = 2500
 
 ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/generic/truck_turbo.wav"
