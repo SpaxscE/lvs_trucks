@@ -66,7 +66,7 @@ ENT.WheelPhysicsTireHeight = 16
 ENT.WheelBrakeForce = 700
 
 ENT.WheelSideForce = 800
-ENT.WheelDownForce = 5000
+ENT.WheelDownForce = 2500
 
 ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/mzkt/mzkt_trans.wav"
