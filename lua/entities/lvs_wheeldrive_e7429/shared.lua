@@ -110,8 +110,8 @@ ENT.ExhaustPositions = {
 ENT.SirenPos = Vector()
 ENT.SirenSound = {
 	[1] = {
-		siren = "lvs/siren1.wav",
-		horn = "lvs/siren3.wav",
+		-- siren = "lvs/siren1.wav",
+		-- horn = "lvs/siren3.wav",
 	},
 }
 
