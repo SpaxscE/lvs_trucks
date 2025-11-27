@@ -76,12 +76,13 @@ function ENT:SpawnWheels()
 			UseHandbrake = false,
 		},
 		Wheels = { Wheel1L, Wheel1R },
-			Suspension = {
-			Height = 5,
+		Suspension = {
+			Height = 10,
 			MaxTravel = 7,
-			SpringConstant = 25000,
-			SpringDamping = 2000,
-			SpringRelativeDamping = 2000,
+			ControlArmLength = 250,
+			SpringConstant = 50000,
+			SpringDamping = 5000,
+			SpringRelativeDamping = 3500,
 		},
 	} )
 
@@ -111,13 +112,14 @@ function ENT:SpawnWheels()
 			BrakeFactor = 1,
 			UseHandbrake = true,
 		},
-			Wheels = { Wheel2L, Wheel2R },
-			Suspension = {
+		Wheels = { Wheel2L, Wheel2R },
+		Suspension = {
 			Height = 6,
 			MaxTravel = 7,
-			SpringConstant = 30000,
-			SpringDamping = 2000,
-			SpringRelativeDamping = 2000,
+			ControlArmLength = 250,
+			SpringConstant = 35000,
+			SpringDamping = 4000,
+			SpringRelativeDamping = 3000,
 		},
 	} )
 
@@ -145,13 +147,14 @@ function ENT:SpawnWheels()
 			BrakeFactor = 1,
 			UseHandbrake = false,
 		},
-			Wheels = { Wheel3L, Wheel3R },
-			Suspension = {
+		Wheels = { Wheel3L, Wheel3R },
+		Suspension = {
 			Height = 6,
 			MaxTravel = 7,
-			SpringConstant = 30000,
-			SpringDamping = 2000,
-			SpringRelativeDamping = 2000,
+			ControlArmLength = 250,
+			SpringConstant = 35000,
+			SpringDamping = 4000,
+			SpringRelativeDamping = 3000,
 		},
 	} )
 

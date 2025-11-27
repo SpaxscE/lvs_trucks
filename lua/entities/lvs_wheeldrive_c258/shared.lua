@@ -16,11 +16,21 @@ ENT.MDL = "models/thegordonbeeman/vehicles/c-258.mdl"
 ENT.MaxVelocity = 780
 ENT.MaxVelocityReverse = 150
 
-ENT.PhysicsWeightScale = 2.0
+ENT.PhysicsWeightScale = 5
+ENT.PhysicsDampingSpeed = 50
+ENT.PhysicsDampingForward = true
+ENT.PhysicsDampingReverse = true
 
-ENT.EngineCurve = 1
-ENT.EngineCurveBoostLow = 3.0
-ENT.EngineTorque = 40
+ENT.SteerAssistDeadZoneAngle = 10
+ENT.SteerAssistMaxAngle = 0
+ENT.SteerAssistExponent = 1
+ENT.SteerAssistMultiplier = 0
+
+ENT.PhysicsWeightScale = 2.5
+
+ENT.EngineCurve = 0.8
+ENT.EngineCurveBoostLow = 3
+ENT.EngineTorque = 70
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
@@ -36,7 +46,7 @@ ENT.EngineStopSound = "lvs/vehicles/kraz/kraz_stop.wav"
 ENT.TransGears = 5
 ENT.TransGearsReverse = 1
 ENT.TransShiftSpeed = 1.0
-ENT.TransShiftTorqueFactor = 0.5
+ENT.TransShiftTorqueFactor = 0.6
 ENT.TransMinGearHoldTime = 1.5
 
 ENT.SteerSpeed = 1.5
@@ -49,16 +59,18 @@ ENT.WheelBrakeReleaseSound = "LVS.Brake.Release"
 ENT.AllowSuperCharger = false
 ENT.AllowTurbo = true
 
-ENT.PhysicsInertia = Vector( 8000, 2000, 8000)
+ENT.PhysicsInertia = Vector(1500,1500,1500)
+
+ENT.MassCenterOverride = Vector(80,0,40)
 
 ENT.WheelPhysicsMass = 100
-ENT.WheelPhysicsInertia = Vector( 25, 10, 25)
+ENT.WheelPhysicsInertia = Vector(14,14,14)
 ENT.WheelPhysicsTireHeight = 8.77
 
 ENT.WheelBrakeForce = 400
 
 ENT.WheelSideForce = 800
-ENT.WheelDownForce = 2000
+ENT.WheelDownForce = 1000
 
 ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/generic/truck_turbo.wav"
