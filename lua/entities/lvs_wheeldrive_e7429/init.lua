@@ -60,12 +60,14 @@ function ENT:SpawnWheels()
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 	local Wheel1R = self:AddWheel( {
 		pos = Vector( 2.737,-1.244, 0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 	local Axle1 = self:DefineAxle( {
 		Axle = {
@@ -95,12 +97,14 @@ function ENT:SpawnWheels()
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 	local Wheel2R = self:AddWheel( {
 		pos = Vector( 0.526,-1.244, 0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 	local Axle2 = self:DefineAxle( {
 		Axle = {
@@ -130,12 +134,14 @@ function ENT:SpawnWheels()
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 	local Wheel3R = self:AddWheel( {
 		pos = Vector(-2.108,-1.244, 0.700) * 40,--0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 	local Axle3 = self:DefineAxle( {
 		Axle = {
@@ -165,12 +171,14 @@ function ENT:SpawnWheels()
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 	local Wheel4R = self:AddWheel( {
 		pos = Vector(-3.806,-1.244, 0.700) * 40,--0.591) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.769 * 40,
+		width = 10,
 	} )
 
 	self:SetNWEntity( "DriveWheel1", Wheel4L )

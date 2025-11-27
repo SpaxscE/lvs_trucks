@@ -98,12 +98,14 @@ function ENT:SpawnWheels()
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.542 * 40,
+		width = 10,
 	} )
 	local Wheel2R = self:AddWheel( {
 		pos = Vector(-0.255,-0.997, 0.624) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.542 * 40,
+		width = 10,
 	} )
 	local Axle2 = self:DefineAxle( {
 		Axle = {
@@ -133,12 +135,14 @@ function ENT:SpawnWheels()
 		mdl = WheelModel,
 		mdl_ang = Angle(0, 90),
 		radius = 0.542 * 40,
+		width = 10,
 	} )
 	local Wheel3R = self:AddWheel( {
 		pos = Vector(-1.718,-0.997, 0.624) * 40,
 		mdl = WheelModel,
 		mdl_ang = Angle(0,-90),
 		radius = 0.542 * 40,
+		width = 10,
 	} )
 	local Axle3 = self:DefineAxle( {
 		Axle = {
