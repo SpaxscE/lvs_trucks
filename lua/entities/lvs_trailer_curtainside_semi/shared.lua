@@ -13,6 +13,8 @@ ENT.AdminSpawnable		= false
 
 ENT.MDL = "models/thegordonbeeman/vehicles/curtainside_semi-trailer.mdl"
 
+ENT.MassCenterOverride = Vector(-300,0,40)
+
 function ENT:OnSetupDataTables()
 	self:AddDT( "Bool", "Supports" )
 end
