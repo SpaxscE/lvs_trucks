@@ -41,7 +41,9 @@ function ENT:OnSpawn( pObj )
 	Door1R_Handler:LinkToSeat( Seat )
 
 	self:AddEngine( Vector( 2.207, 0.000, 1.188) * 40 )
-	self:AddTurboCharger() -- turbodiesel but idk how you want it
+	self:AddFuelTank( Vector(45,0,35), Angle(0,0,0), 1000, LVS.FUELTYPE_DIESEL, Vector(-20,-45,-10),Vector(20,45,10) )
+	
+	self:AddTurboCharger() -- turbodiesel but idk how you want it  // tbh i wouldnt add turbo by default. Right now it serves no real purpose as it doesnt add turbo sounds or anything. It just takes the option away to easily tune it ingame
 
 	self:SpawnWheels()
 
