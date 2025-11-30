@@ -28,9 +28,9 @@ ENT.SteerAssistMultiplier = 0
 
 ENT.PhysicsWeightScale = 2.5
 
-ENT.EngineCurve = 0.8
-ENT.EngineCurveBoostLow = 6
-ENT.EngineTorque = 70
+ENT.EngineCurve = 0.65
+ENT.EngineCurveBoostLow = 3
+ENT.EngineTorque = 140
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
@@ -46,7 +46,7 @@ ENT.EngineStopSound = "lvs/vehicles/kraz/kraz_stop.wav"
 ENT.TransGears = 5
 ENT.TransGearsReverse = 1
 ENT.TransShiftSpeed = 1.0
-ENT.TransShiftTorqueFactor = 0.6
+ENT.TransShiftTorqueFactor = 0.5
 ENT.TransMinGearHoldTime = 1.5
 
 ENT.SteerSpeed = 1.5
