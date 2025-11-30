@@ -1,3 +1,0 @@
-name=Trucks - Pack
-version=1
-url=https://raw.githubusercontent.com/SpaxscE/lvs_trucks/refs/heads/main/data_static/lvs/1111.txt

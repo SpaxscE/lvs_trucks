@@ -1,6 +1,6 @@
 
 if SERVER then
-	--resource.AddWorkshop( "" )
+	resource.AddWorkshop( "3615511918" )
 
 	return
 end
