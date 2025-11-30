@@ -274,6 +274,6 @@ ENT.Lights = {
 				colorG = 90, colorB = 80, colorA = 255,
 				width = 15, height = 15,
 			},
-        },
-    },
+		},
+	},
 }
