@@ -54,9 +54,6 @@ ENT.WheelBrakeLockupRPM = 3
 ENT.WheelBrakeApplySound = "LVS.Brake.Apply"
 ENT.WheelBrakeReleaseSound = "LVS.Brake.Release"
 
-ENT.AllowSuperCharger = false
-ENT.AllowTurbo = true
-
 ENT.PhysicsInertia = Vector(1500,1500,1500)
 
 ENT.WheelPhysicsMass = 100
@@ -71,6 +68,9 @@ ENT.WheelDownForce = 2500
 ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/mzkt/mzkt_trans.wav"
 ENT.TurboVolume = 1.0
+
+ENT.HornSound = "lvs/horn3.wav"
+ENT.HornPos = Vector(150,0,35)
 
 ENT.EngineSounds = {
 	{
