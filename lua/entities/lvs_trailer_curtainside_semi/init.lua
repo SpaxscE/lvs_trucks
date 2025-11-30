@@ -192,7 +192,7 @@ function ENT:OnCoupleChanged( targetVehicle, targetHitch, active )
 
 		if active then
 			Pod._OldCamDistance = CurDist
-			Pod:SetCameraDistance( 1 )
+			Pod:SetCameraDistance( 1.7 )
 		else
 			if Pod._OldCamDistance then
 				Pod:SetCameraDistance( Pod._OldCamDistance )
