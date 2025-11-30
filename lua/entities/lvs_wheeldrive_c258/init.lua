@@ -11,7 +11,7 @@ function ENT:OnSpawn( pObj )
 	Bonnet_Handler:SetRate( 3.5 )
 	Bonnet_Handler:SetRateExponent( 1.1 )
 	Bonnet_Handler:SetSoundOpen( "lvs/vehicles/generic/truck_open_01.wav" )
-	Bonnet_Handler:SetSoundClose( "lvs/vehicles/generic/truck_close_01-short.wav" )
+	Bonnet_Handler:SetSoundClose( "lvs/vehicles/generic/truck_close_01_short.wav" )
 
 	local Door1L_Handler = self:AddDoorHandler( "door1_l",
 		Vector( 2.312, 0.890, 1.900) * 40, Angle(),
@@ -21,7 +21,7 @@ function ENT:OnSpawn( pObj )
 	Door1L_Handler:SetRate( 3.5 )
 	Door1L_Handler:SetRateExponent( 1.1 )
 	Door1L_Handler:SetSoundOpen( "lvs/vehicles/generic/truck_open_01.wav" )
-	Door1L_Handler:SetSoundClose( "lvs/vehicles/generic/truck_close_01-short.wav" )
+	Door1L_Handler:SetSoundClose( "lvs/vehicles/generic/truck_close_01_short.wav" )
 
 	local Door1R_Handler = self:AddDoorHandler( "door1_r",
 		Vector( 2.312,-0.890, 1.900) * 40, Angle(),
@@ -31,7 +31,7 @@ function ENT:OnSpawn( pObj )
 	Door1R_Handler:SetRate( 3.5 )
 	Door1R_Handler:SetRateExponent( 1.1 )
 	Door1R_Handler:SetSoundOpen( "lvs/vehicles/generic/truck_open_01.wav" )
-	Door1R_Handler:SetSoundClose( "lvs/vehicles/generic/truck_close_01-short.wav" )
+	Door1R_Handler:SetSoundClose( "lvs/vehicles/generic/truck_close_01_short.wav" )
 
 	local Seat
 	Seat = self:AddDriverSeat( Vector( 1.750, 0.485, 1.500) * 40, Angle( 0,-90,-5) )
