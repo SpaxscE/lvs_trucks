@@ -269,10 +269,34 @@ ENT.Lights = {
 			{	pos = "light_att1",
 				colorG = 90, colorB = 50, colorA = 50,
 				width = 50, height = 50,
+                bodygroup = { name = "Light", active = { 1 } },
 			},
 			{	pos = "light_att1",
 				colorG = 90, colorB = 80, colorA = 255,
 				width = 15, height = 15,
+                bodygroup = { name = "Light", active = { 1 } },
+			},
+            
+			{	pos = "light_att2",
+				colorG = 90, colorB = 50, colorA = 50,
+				width = 50, height = 50,
+                bodygroup = { name = "Light", active = { 2 } },
+			},
+			{	pos = "light_att2",
+				colorG = 90, colorB = 80, colorA = 255,
+				width = 15, height = 15,
+                bodygroup = { name = "Light", active = { 2 } },
+			},
+            
+			{	pos = "light_att3",
+				colorG = 90, colorB = 50, colorA = 50,
+				width = 50, height = 50,
+                bodygroup = { name = "Light", active = { 2 } },
+			},
+			{	pos = "light_att3",
+				colorG = 90, colorB = 80, colorA = 255,
+				width = 15, height = 15,
+                bodygroup = { name = "Light", active = { 2 } },
 			},
 		},
 	},
@@ -283,12 +307,42 @@ ENT.RandomColor = {
         Color = Color( 255, 255, 255),
         BodyGroups = {
             [ 2 ] = 0,
+            [ 3 ] = 0,
         },
     },
     {
         Color = Color( 79, 82, 62),
         BodyGroups = {
             [ 2 ] = 1,
+            [ 3 ] = 0,
+        },
+    },
+    {
+        Color = Color( 255, 255, 255),
+        BodyGroups = {
+            [ 2 ] = 0,
+            [ 3 ] = 1,
+        },
+    },
+    {
+        Color = Color( 79, 82, 62),
+        BodyGroups = {
+            [ 2 ] = 1,
+            [ 3 ] = 1,
+        },
+    },
+    {
+        Color = Color( 255, 255, 255),
+        BodyGroups = {
+            [ 2 ] = 0,
+            [ 3 ] = 2,
+        },
+    },
+    {
+        Color = Color( 79, 82, 62),
+        BodyGroups = {
+            [ 2 ] = 1,
+            [ 3 ] = 2,
         },
     },
 }
