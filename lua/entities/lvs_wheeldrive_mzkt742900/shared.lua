@@ -286,7 +286,7 @@ ENT.RandomColor = {
         },
     },
     {
-        Color = Color( 91, 96, 64),
+        Color = Color( 79, 82, 62),
         BodyGroups = {
             [ 2 ] = 1,
         },
