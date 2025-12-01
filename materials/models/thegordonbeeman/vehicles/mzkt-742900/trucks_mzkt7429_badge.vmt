@@ -1,0 +1,26 @@
+VertexLitGeneric
+{
+	$basetexture 				"models/thegordonbeeman/_vehicles/trucks_mzkt742900_badge_bt"
+	$bumpmap 					"null-bumpmap"
+
+	$phong 						"1"
+	$phongboost 				"2.0"
+	$phongexponent				"5.0"
+	$phongfresnelranges			"[0.2 0.25 1.0]"
+	$phongalbedotint			"1"
+	
+	$colorfix		            "[1.0 1.0 1.0]"
+	Proxies
+	{
+		Equals
+		{
+			srcVar1			$colorfix
+			resultVar		$color
+		}
+		Equals
+		{
+			srcVar1			$colorfix
+			resultVar		$color2
+		}
+	}
+}

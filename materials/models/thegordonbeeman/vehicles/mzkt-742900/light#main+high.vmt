@@ -1,0 +1,21 @@
+VertexLitGeneric
+{
+	$basetexture 				"models/thegordonbeeman/_mudrunner/trucks_mzkt7429_bt"
+
+	$detail				"models/thegordonbeeman/_mudrunner/trucks_mzkt7429_bt"
+	$detailscale		"1"
+	$detailblendfactor	"0"
+	$detailblendmode	"5"
+	$detailtint			"[1.0 1.0 0.8]"
+
+	$color2 			"[0.8 0.8 0.8]"
+
+	Proxies
+	{
+		Equals
+		{
+			srcVar1 	$color2
+			resultVar	$color
+		}
+	}
+}
