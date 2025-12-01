@@ -82,8 +82,8 @@ function ENT:SpawnWheels()
 		},
 		Wheels = { Wheel1L, Wheel1R },
 		Suspension = {
-			Height = 5,
-			MaxTravel = 7,
+			Height = 8,
+			MaxTravel = 5,
 			ControlArmLength = 250,
 			SpringConstant = 50000,
 			SpringDamping = 6000,
@@ -119,8 +119,8 @@ function ENT:SpawnWheels()
 		},
 		Wheels = { Wheel2L, Wheel2R },
 		Suspension = {
-			Height = 5,
-			MaxTravel = 7,
+			Height = 8,
+			MaxTravel = 5,
 			ControlArmLength = 250,
 			SpringConstant = 50000,
 			SpringDamping = 6000,

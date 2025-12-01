@@ -8,7 +8,7 @@ VertexLitGeneric
 	$detailblendmode	"5"
 	$detailtint			"[1.0 1.0 0.8]"
 
-	$color2 			"[0.8 0.8 0.8]"
+	$color2 			"[1.0 1.0 1.0]"
 
 	Proxies
 	{

@@ -277,3 +277,18 @@ ENT.Lights = {
 		},
 	},
 }
+
+ENT.RandomColor = {
+    {
+        Color = Color( 255, 255, 255),
+        BodyGroups = {
+            [ 2 ] = 0,
+        },
+    },
+    {
+        Color = Color( 91, 96, 64),
+        BodyGroups = {
+            [ 2 ] = 1,
+        },
+    },
+}

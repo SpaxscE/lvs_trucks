@@ -1,6 +1,6 @@
 VertexLitGeneric
 {
-	$basetexture 				"models/thegordonbeeman/_mudrunner/trucks_mzkt7429_bt"
+	$basetexture 				"models/thegordonbeeman/_vehicles/trucks_mzkt742900_bt"
 	$bumpmap 					"models/thegordonbeeman/_mudrunner/trucks_mzkt7429_bm"
 
 	$phong 						"1"
