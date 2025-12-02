@@ -1,0 +1,12 @@
+Refract
+{
+	$normalmap 				    "models/thegordonbeeman/_vehicles/refract_glass3_bm"
+
+	$model			            "1"
+
+	$refractamount	            "0.006"
+	$refracttint                "[1.0 0.45 0.0]"
+	$refracttinttexture         "color/white"
+
+	$bluramount		"0.3"
+}
