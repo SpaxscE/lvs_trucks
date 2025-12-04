@@ -13,7 +13,7 @@ ENT.AdminSpawnable		= false
 
 ENT.MDL = "models/thegordonbeeman/vehicles/maz-537.mdl"
 
-ENT.MaxVelocity = 750
+ENT.MaxVelocity = 650
 ENT.MaxVelocityReverse = 100
 
 ENT.PhysicsWeightScale = 5
@@ -27,8 +27,8 @@ ENT.SteerAssistExponent = 1
 ENT.SteerAssistMultiplier = 0
 
 ENT.EngineCurve = 0.65
-ENT.EngineCurveBoostLow = 4
-ENT.EngineTorque = 100
+ENT.EngineCurveBoostLow = 6
+ENT.EngineTorque = 120
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
@@ -41,9 +41,9 @@ ENT.EngineStartStopVolume = 1.0
 ENT.EngineStartSound = "lvs/vehicles/maz/maz_start.ogg"
 ENT.EngineStopSound = "lvs/vehicles/maz/maz_stop.ogg"
 
-ENT.TransGears = 6
+ENT.TransGears = 4
 ENT.TransGearsReverse = 1
-ENT.TransShiftSpeed = 0.7
+ENT.TransShiftSpeed = 1.0
 ENT.TransShiftTorqueFactor = 0.7
 ENT.TransMinGearHoldTime = 1
 
