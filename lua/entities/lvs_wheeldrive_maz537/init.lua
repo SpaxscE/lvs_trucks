@@ -31,7 +31,7 @@ function ENT:OnSpawn( pObj )
 	Door1L_Handler:LinkToSeat( Seat )
 
 	-- Seat = self:AddPassengerSeat( Vector( 3.550,-0.691, 2.000) * 40, Angle( 0,-90, 10) )
-	Seat = self:AddPassengerSeat( Vector( 3.550,-0.691, 2.000) * 40, Angle( 0,-90, 10) )
+	Seat = self:AddPassengerSeat( Vector( 3.75,-0.691, 1.7) * 40, Angle( 0,-90, 10) )
 	Seat:SetCameraDistance( 0.2 )
 	Door1R_Handler:LinkToSeat( Seat )
 
