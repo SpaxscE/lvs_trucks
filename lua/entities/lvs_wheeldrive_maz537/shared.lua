@@ -75,10 +75,10 @@ ENT.HornPos = Vector(150,0,35)
 ENT.EngineSounds = {
 	{
 		sound = "lvs/vehicles/maz/maz_idle.wav",
-		Volume = 0.5,
+		Volume = 1,
 		Pitch = 80,
 		PitchMul = 30,
-		SoundLevel = 80,
+		SoundLevel = 75,
 		SoundType = LVS.SOUNDTYPE_IDLE_ONLY,
 	},
 	{
