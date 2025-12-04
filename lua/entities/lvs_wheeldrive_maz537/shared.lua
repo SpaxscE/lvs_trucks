@@ -28,7 +28,7 @@ ENT.SteerAssistMultiplier = 0
 
 ENT.EngineCurve = 0.65
 ENT.EngineCurveBoostLow = 6
-ENT.EngineTorque = 120
+ENT.EngineTorque = 90
 
 ENT.EngineIdleRPM = 500
 ENT.EngineMaxRPM = 3250
@@ -63,7 +63,7 @@ ENT.WheelPhysicsTireHeight = 16
 ENT.WheelBrakeForce = 700
 
 ENT.WheelSideForce = 800
-ENT.WheelDownForce = 1500
+ENT.WheelDownForce = 2000
 
 ENT.TurboBlowOff = "common/null.wav"
 ENT.TurboSound = "lvs/vehicles/mzkt/mzkt_trans.wav"
