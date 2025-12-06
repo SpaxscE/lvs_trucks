@@ -11,7 +11,7 @@ ENT.VehicleSubCategory = "Trailers"
 ENT.Spawnable			= true
 ENT.AdminSpawnable		= false
 
-ENT.MDL = "models/thegordonbeeman/vehicles/sideboard_semi-trailer.mdl"
+ENT.MDL = "models/thegordonbeeman/vehicles/trailer_semi_sideboard.mdl"
 
 function ENT:OnSetupDataTables()
 	self:AddDT( "Bool", "Supports" )
@@ -20,7 +20,7 @@ end
 ENT.Lights = {
 	{
 		Trigger = "active",
-		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#active",
+		SubMaterialID = "models/thegordonbeeman/vehicles/trailer_semi_sideboard/light_active",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector( 1.018, 1.186, 1.371) * 40,
@@ -69,7 +69,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "turnleft",
-		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#turnleft",
+		SubMaterialID = "models/thegordonbeeman/vehicles/trailer_semi_sideboard/light_turnleft",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector(-7.679, 1.089, 1.232) * 40,
@@ -80,7 +80,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "turnright",
-		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#turnright",
+		SubMaterialID = "models/thegordonbeeman/vehicles/trailer_semi_sideboard/light_turnright",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector(-7.679,-1.089, 1.232) * 40,
@@ -91,7 +91,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "main+brake",
-		SubMaterialID = "models/thegordonbeeman/vehicles/sideboard_semi-trailer/light#main+brake",
+		SubMaterialID = "models/thegordonbeeman/vehicles/trailer_semi_sideboard/light_main+brake",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector(-7.679, 0.963, 1.247) * 40,
