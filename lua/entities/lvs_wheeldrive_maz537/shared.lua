@@ -11,7 +11,7 @@ ENT.VehicleSubCategory = "Trucks"
 ENT.Spawnable			= true
 ENT.AdminSpawnable		= false
 
-ENT.MDL = "models/thegordonbeeman/vehicles/maz-537.mdl"
+ENT.MDL = "models/thegordonbeeman/vehicles/maz537.mdl"
 
 ENT.MaxVelocity = 650
 ENT.MaxVelocityReverse = 100
@@ -161,7 +161,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "main+high",
-		SubMaterialID = "models/thegordonbeeman/vehicles/maz-537/light#main+high",
+		SubMaterialID = "models/thegordonbeeman/vehicles/maz537/light_main+high",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector( 4.709, 0.792, 1.758) * 40,
@@ -174,7 +174,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "active",
-		SubMaterialID = "models/thegordonbeeman/vehicles/maz-537/light#active",
+		SubMaterialID = "models/thegordonbeeman/vehicles/maz537/light_active",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector( 4.740, 1.075, 1.755) * 40,
@@ -189,7 +189,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "main+brake",
-		SubMaterialID = "models/thegordonbeeman/vehicles/maz-537/light#main+brake",
+		SubMaterialID = "models/thegordonbeeman/vehicles/maz537/light_main+brake",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector(-3.619, 0.664, 1.266) * 40,
@@ -204,7 +204,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "turnleft",
-		SubMaterialID = "models/thegordonbeeman/vehicles/maz-537/light#turnleft",
+		SubMaterialID = "models/thegordonbeeman/vehicles/maz537/light_turnleft",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector(-3.596, 0.826, 1.266) * 40,
@@ -219,7 +219,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "turnright",
-		SubMaterialID = "models/thegordonbeeman/vehicles/maz-537/light#turnright",
+		SubMaterialID = "models/thegordonbeeman/vehicles/maz537/light_turnright",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector(-3.596,-0.826, 1.266) * 40,
@@ -234,7 +234,7 @@ ENT.Lights = {
 	},
 	-- {
 	-- 	Trigger = "reverse",
-	-- 	SubMaterialID = "models/thegordonbeeman/vehicles/maz-537/light#reverse",
+	-- 	SubMaterialID = "models/thegordonbeeman/vehicles/maz537/light_reverse",
 	-- 	SubMaterialBrightness = 0.5,
 	-- 	Sprites = {
 	-- 		{	pos = Vector(-4.696, 0.755, 1.200) * 40,
@@ -250,7 +250,7 @@ ENT.Lights = {
 	-- {
 	-- 	Siren = true,
 	-- 	Trigger = "1",
-	-- 	SubMaterialID = "models/thegordonbeeman/vehicles/maz-537/light#siren",
+	-- 	SubMaterialID = "models/thegordonbeeman/vehicles/maz537/light_siren",
 	-- 	SubMaterialBrightness = 0.5,
 	-- 	Sprites = {
 	-- 		{	pos = "light_att1",

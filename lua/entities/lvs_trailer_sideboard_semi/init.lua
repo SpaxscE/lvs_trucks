@@ -21,7 +21,7 @@ function ENT:OnSpawn( pObj )
 end
 
 function ENT:SpawnWheels()
-	local WheelModel = "models/thegordonbeeman/vehicles/c-256_wheel_rear.mdl"
+	local WheelModel = "models/thegordonbeeman/vehicles/kraz258/wheel_rear.mdl"
 
 	local Wheel1L = self:AddWheel( {
 		pos = Vector(-5.528, 0.836, 0.557) * 40,
