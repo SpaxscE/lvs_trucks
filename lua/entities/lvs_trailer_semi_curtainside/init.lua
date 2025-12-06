@@ -8,16 +8,20 @@ function ENT:OnSpawn( pObj )
 		Vector(-3,-22,-50), Vector( 3, 22, 50),
 		Vector(-44,-22,-50), Vector( 3, 22, 50)
 	)
-	Door1L_Handler:SetRate( 3.5 )
-	Door1L_Handler:SetRateExponent( 1.1 )
+	Door1L_Handler:SetSoundOpen( "doors/default_move.wav" )
+	Door1L_Handler:SetSoundClose( "doors/door_metal_large_close2.wav" )
+	Door1L_Handler:SetRate( 4 )
+	Door1L_Handler:SetRateExponent( 2 )
 
 	local Door1R_Handler = self:AddDoorHandler( "!door1_r",
 		Vector(-11.10,-0.560, 2.618) * 40, Angle(),
 		Vector(-3,-22,-50), Vector( 3, 22, 50),
 		Vector(-44,-22,-50), Vector( 3, 22, 50)
 	)
-	Door1R_Handler:SetRate( 3.5 )
-	Door1R_Handler:SetRateExponent( 1.1 )
+	Door1R_Handler:SetSoundOpen( "doors/default_move.wav" )
+	Door1R_Handler:SetSoundClose( "doors/door_metal_large_close2.wav" )
+	Door1R_Handler:SetRate( 4 )
+	Door1R_Handler:SetRateExponent( 2 )
 
 	self:SpawnWheels()
 
