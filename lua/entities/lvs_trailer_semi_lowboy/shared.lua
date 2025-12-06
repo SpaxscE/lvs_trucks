@@ -11,7 +11,7 @@ ENT.VehicleSubCategory = "Trailers"
 ENT.Spawnable			= true
 ENT.AdminSpawnable		= false
 
-ENT.MDL = "models/thegordonbeeman/vehicles/lowboy_semi-trailer.mdl"
+ENT.MDL = "models/thegordonbeeman/vehicles/trailer_semi_lowboy.mdl"
 
 ENT.MassCenterOverride = Vector(-80,0,40)
 

@@ -1,4 +1,5 @@
 source/*
+source-new/*
 *.tga
 *.dds
 *.xcf
