@@ -56,7 +56,7 @@ function ENT:OnSpawn( pObj )
 end
 
 function ENT:SpawnWheels()
-	local WheelModel = "models/thegordonbeeman/vehicles/c-256_wheel_front.mdl"
+	local WheelModel = "models/thegordonbeeman/vehicles/kraz258/wheel_front.mdl"
 
 	local Wheel1L = self:AddWheel( {
 		pos = Vector( 3.820, 0.997, 0.636) * 40,
@@ -81,7 +81,7 @@ function ENT:SpawnWheels()
 		},
 		Wheels = { Wheel1L, Wheel1R },
 		Suspension = {
-			Height = 10,
+			Height = 8,
 			MaxTravel = 7,
 			ControlArmLength = 250,
 			SpringConstant = 50000,
@@ -93,7 +93,7 @@ function ENT:SpawnWheels()
 	self:CreateRigControler( "1l", Wheel1L, 40 * 0.835, 40 * 0.480 )
 	self:CreateRigControler( "1r", Wheel1R, 40 * 0.835, 40 * 0.480 )
 
-	WheelModel = "models/thegordonbeeman/vehicles/c-256_wheel_rear.mdl"
+	WheelModel = "models/thegordonbeeman/vehicles/kraz258/wheel_rear.mdl"
 
 	local Wheel2L = self:AddWheel( {
 		pos = Vector(-0.255, 0.997, 0.624) * 40,
@@ -120,7 +120,7 @@ function ENT:SpawnWheels()
 		},
 		Wheels = { Wheel2L, Wheel2R },
 		Suspension = {
-			Height = 6,
+			Height = 4,
 			MaxTravel = 7,
 			ControlArmLength = 250,
 			SpringConstant = 35000,
@@ -157,7 +157,7 @@ function ENT:SpawnWheels()
 		},
 		Wheels = { Wheel3L, Wheel3R },
 		Suspension = {
-			Height = 6,
+			Height = 4,
 			MaxTravel = 7,
 			ControlArmLength = 250,
 			SpringConstant = 35000,

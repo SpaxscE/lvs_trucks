@@ -1,6 +1,6 @@
 ENT.Base = "lvs_wheeldrive_truckbase"
 
-ENT.PrintName = "C-258"
+ENT.PrintName = "KrAZ-258"
 ENT.Author = ""
 ENT.Information = "Luna's Vehicle Script"
 ENT.Category = "[LVS] - Trucks - Pack"
@@ -11,7 +11,7 @@ ENT.VehicleSubCategory = "Trucks"
 ENT.Spawnable			= true
 ENT.AdminSpawnable		= false
 
-ENT.MDL = "models/thegordonbeeman/vehicles/c-258.mdl"
+ENT.MDL = "models/thegordonbeeman/vehicles/kraz258.mdl"
 
 ENT.MaxVelocity = 780
 ENT.MaxVelocityReverse = 150
@@ -144,54 +144,66 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "main+high",
-		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#main+high",
-		SubMaterialBrightness = 0.5,
+		SubMaterialID = "models/thegordonbeeman/vehicles/kraz258/light_main+high2",
+		SubMaterialBrightness = 1.0,
 		Sprites = {
-			{	pos = Vector( 4.466, 0.716, 1.508) * 40,
-				colorB = 200, colorA = 100,
+			{	pos = Vector( 4.382, 0.750, 1.432) * 40,
+				colorB = 200, colorA = 50,
 			},
-			{	pos = Vector( 4.466,-0.716, 1.508) * 40,
-				colorB = 200, colorA = 100,
+			{	pos = Vector( 4.382,-0.750, 1.432) * 40,
+				colorB = 200, colorA = 50,
 			},
 		},
 	},
+	-- {
+	-- 	Trigger = "active",
+	-- 	SubMaterialID = "models/thegordonbeeman/vehicles/kraz258/light_active",
+	-- 	SubMaterialBrightness = 0.2,
+	-- 	Sprites = {
+	-- 		{	pos = Vector( 4.311, 1.050, 1.389) * 40,
+	-- 			colorG = 220, colorB = 150, colorA = 50,
+	-- 			width = 20, height = 20,
+	-- 		},
+	-- 		{	pos = Vector( 4.311,-1.050, 1.389) * 40,
+	-- 			colorG = 220, colorB = 150, colorA = 50,
+	-- 			width = 20, height = 20,
+	-- 		},
+	-- 	},
+	-- },
 	{
 		Trigger = "active",
-		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#active",
-		SubMaterialBrightness = 0.2,
-		Sprites = {
-			{	pos = Vector( 4.311, 1.050, 1.389) * 40,
-				colorG = 220, colorB = 150, colorA = 50,
-				width = 20, height = 20,
-			},
-			{	pos = Vector( 4.311,-1.050, 1.389) * 40,
-				colorG = 220, colorB = 150, colorA = 50,
-				width = 20, height = 20,
-			},
-		},
-	},
-	{
-		Trigger = "active",
-		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#active2",
+		SubMaterialID = "models/thegordonbeeman/vehicles/kraz258/light_active2",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector( 2.605, 0.170, 2.743) * 40,
 				colorG = 200, colorB = 50, colorA = 50,
 				width = 15, height = 15,
+                -- bodygroup = { name = "Runninglight", active = { 0 } },
 			},
 			{	pos = Vector( 2.605, 0.000, 2.743) * 40,
 				colorG = 200, colorB = 50, colorA = 50,
 				width = 15, height = 15,
+                -- bodygroup = { name = "Runninglight", active = { 0 } },
 			},
 			{	pos = Vector( 2.605,-0.170, 2.743) * 40,
 				colorG = 200, colorB = 50, colorA = 50,
 				width = 15, height = 15,
+                -- bodygroup = { name = "Runninglight", active = { 0 } },
+			},
+            
+			{	pos = Vector( 4.359, 1.053, 1.443) * 40,
+				colorG = 220, colorB = 150, colorA = 50,
+				width = 20, height = 20,
+			},
+			{	pos = Vector( 4.359,-1.053, 1.443) * 40,
+				colorG = 220, colorB = 150, colorA = 50,
+				width = 20, height = 20,
 			},
 		},
 	},
 	{
 		Trigger = "turnleft",
-		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#turnleft",
+		SubMaterialID = "models/thegordonbeeman/vehicles/kraz258/light_turnleft",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector( 3.667, 1.166, 1.500) * 40,
@@ -202,7 +214,7 @@ ENT.Lights = {
 	},
 	{
 		Trigger = "turnright",
-		SubMaterialID = "models/thegordonbeeman/vehicles/c-256/light#turnright",
+		SubMaterialID = "models/thegordonbeeman/vehicles/kraz258/light_turnright",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
 			{	pos = Vector( 3.667,-1.166, 1.500) * 40,
@@ -211,4 +223,42 @@ ENT.Lights = {
 			},
 		},
 	},
+}
+
+ENT.RandomColor = {
+    {
+        Color = Color( 63, 64, 55),
+        BodyGroups = {
+            [ 2 ] = 0,
+            [ 3 ] = 0,
+        },
+    },
+    {
+        Color = Color( 79, 82, 62),
+        BodyGroups = {
+            [ 2 ] = 1,
+            [ 3 ] = 0,
+        },
+    },
+    {
+        Color = Color( 76, 127, 169),
+        BodyGroups = {
+            [ 2 ] = 1,
+            [ 3 ] = 0,
+        },
+    },
+    {
+        Color = Color( 200, 150, 65),
+        BodyGroups = {
+            [ 2 ] = 1,
+            [ 3 ] = 0,
+        },
+    },
+    {
+        Color = Color( 163, 150, 93),
+        BodyGroups = {
+            [ 2 ] = 1,
+            [ 3 ] = 0,
+        },
+    },
 }

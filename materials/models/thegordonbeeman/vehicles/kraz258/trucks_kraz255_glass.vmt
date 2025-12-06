@@ -10,4 +10,19 @@ VertexLitGeneric
 	$phongexponent				"15.0"
 	$phongfresnelranges			"[0.2 0.25 1.0]"
 	$phongalbedotint			"1"
+	
+	$colorfix		            "[1.0 1.0 1.0]"
+	Proxies
+	{
+		Equals
+		{
+			srcVar1			$colorfix
+			resultVar		$color
+		}
+		Equals
+		{
+			srcVar1			$colorfix
+			resultVar		$color2
+		}
+	}
 }
