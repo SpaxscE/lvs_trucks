@@ -171,7 +171,7 @@ ENT.Lights = {
 	-- 	},
 	-- },
 	{
-		Trigger = "active",
+		Trigger = "fog",
 		SubMaterialID = "models/thegordonbeeman/vehicles/kraz258/light_active2",
 		SubMaterialBrightness = 0.5,
 		Sprites = {

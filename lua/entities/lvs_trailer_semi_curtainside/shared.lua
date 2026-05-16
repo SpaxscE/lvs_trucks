@@ -21,7 +21,7 @@ end
 
 ENT.Lights = {
 	{
-		Trigger = "active",
+		Trigger = "fog",
 		SubMaterialID = "models/thegordonbeeman/vehicles/trailer_semi_curtainside/light_active",
 		SubMaterialBrightness = 0.5,
 		Sprites = {

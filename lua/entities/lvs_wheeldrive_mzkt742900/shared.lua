@@ -160,7 +160,7 @@ ENT.Lights = {
 		},
 	},
 	{
-		Trigger = "active",
+		Trigger = "fog",
 		SubMaterialID = "models/thegordonbeeman/vehicles/mzkt742900/light_active",
 		SubMaterialBrightness = 0.5,
 		Sprites = {
